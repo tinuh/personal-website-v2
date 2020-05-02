@@ -1,9 +1,9 @@
 {
-  "homepage": "http://react.tinu.tech",
+  "homepage": "https://react.tinu.tech",
   "name": "personal-website-react",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "dependencies": {s
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
