@@ -1,12 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+import NavbarComponent from "./navbar";
+import Home from "./home";
+import Footer from "./footer";
+import HomeworkManager from "./homework-manager";
+import About from "./about";
+import School from "./school";
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <h1>Tinu Vanapamula</h1>
+      <NavbarComponent />
+
+      <Switch>
+        <Route exact path = "/" component = {Home} />
+        <Route exact path = "/school" component = {School} />
+        <Route exact path = "/homework-manager" component = {HomeworkManager} />
+        <Route exact path = "/about" component = {About} />
+      </Switch>
+
+      <Footer />
     </div>
+    </Router>
   );
 }
 
