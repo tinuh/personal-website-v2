@@ -23,8 +23,7 @@ function About() {
             I developed a web-application called the Homework Manager.
             You can learn more about that <Link className="about-link" to="/homework-manager">Here</Link>.
             Additionally, I have participated in an Engineering Challenge at John's Hopkins Applied Physics lab.
-            Learn more about my achievements and the competitions I participated in <Link className="about-link"
-                                                                                       to="/competitions-achievements">Here</Link>.
+            Learn more about my achievements and the competitions I participated in <Link className="about-link" to="/competitions-achievements">Here</Link>.
             Additionally, One of my favorite hobbies is making media, I enjoy the art of video production because it is
             fun and I get to express myself.
           </h4>
