@@ -19,7 +19,7 @@ function School() {
       <div className="school-div">
         <h2 className="sub-heading"><Link className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={blair} onClick={() => setBlair(!blair)}>Montgomery Blair High School</Link></h2>
-        <hr color="#ffffff"></hr>
+        <hr color="#ffffff" />
 
             <Collapse in={blair}>
                 <h4 className="school-text">Tinu Vanapamula is an Upcoming 9th grader at <a className="school-link"
@@ -27,11 +27,11 @@ function School() {
                                                                                             target="blank">Montgomery
                     Blair High School</a> for the 2020-2021 school year. He will be attending the Magnet Math, Science,
                     and Computer Science Program there. </h4>
-            </Collapse>
+            </Collapse><br />
 
         <h2 className="sub-heading"><Link className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={tpms} onClick={() => setTpms(!tpms)}>Takoma Park Middle School</Link></h2>
-        <hr color="#ffffff"></hr>
+        <hr color="#ffffff" />
 
             <Collapse in={tpms}>
                 <h4 className="school-text">Tinu Vanapamula is an Upcoming 9th grader at <a className="school-link"
@@ -39,11 +39,11 @@ function School() {
                                                                                             target="blank">Montgomery
                     Blair High School</a> for the 2020-2021 school year. He will be attending the Magnet Math, Science,
                     and Computer Science Program there. </h4>
-            </Collapse>
+            </Collapse><br />
 
         <h2 className="sub-heading"><Link className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={drew} onClick={() => setDrew(!drew)}>Dr. Charles R. Drew Elementary School</Link></h2>
-        <hr color="#ffffff"></hr>
+        <hr color="#ffffff" />
 
             <Collapse in={drew}>
                 <h4 className="school-text">Tinu Vanapamula is an Upcoming 9th grader at <a className="school-link"
@@ -51,11 +51,11 @@ function School() {
                                                                                             target="blank">Montgomery
                     Blair High School</a> for the 2020-2021 school year. He will be attending the Magnet Math, Science,
                     and Computer Science Program there. </h4>
-            </Collapse>
+            </Collapse><br />
 
         <h2 className="sub-heading"><Link className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={bes} onClick={() => setBes(!bes)}>Burtonsville Elementary School</Link></h2>
-        <hr color="#ffffff"></hr>
+        <hr color="#ffffff" />
 
             <Collapse in={bes}>
                 <h4 className="school-text">Tinu Vanapamula is an Upcoming 9th grader at <a className="school-link"
