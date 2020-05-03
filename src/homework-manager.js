@@ -3,9 +3,11 @@ import './App.css';
 import Message from "./alert";
 
 function HomeworkManager() {
+  document.title = "Homework Manager - Tinu Vanapamula";
+
   return (
     <div className="App">
-      <Message type = "info" message = "Click Here to see the live site" dismiss = "5000" link = "http://homework.tinu.tech" />
+      <Message type = "info" message = "to view see the live site" dismiss = "5000" link = "http://homework.tinu.tech"/>
 
       <a className="heading" href="http://homework.tinu.tech" target="blank" title="Click to view the live site"><h1 className="heading">The Homework Manager</h1></a>
 

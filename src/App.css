@@ -21,6 +21,7 @@ body{
 
 .competition{
     color: #ffffff;
+    line-height: 30pt;
 }
 
 .competition-link{
@@ -42,6 +43,7 @@ body{
 }
 
 .competition-div{
+    margin-top: 32.5px;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -192,7 +194,7 @@ body{
 }
 
 .index-link{
-    color: #00c7c1;
+    color: #008683;
 }
 
 .text-link{

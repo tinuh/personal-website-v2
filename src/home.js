@@ -6,6 +6,8 @@ import Message from "./alert";
 import {Link} from "react-router-dom";
 
 function Home() {
+  document.title = "Tinu Vanapamula";
+
   return (
     <div className="Home">
         <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" />

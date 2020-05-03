@@ -4,6 +4,8 @@ import aboutIMG from "./img/about.jpg";
 import {Link} from "react-router-dom";
 
 function About() {
+  document.title = "About - Tinu Vanapamula";
+
   return (
     <div className="About">
       <h1 className="heading">About Me</h1>
