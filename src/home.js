@@ -19,12 +19,19 @@ function Home() {
               src={Picture}
               alt="First slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className = "carousel-caption">
               <h2>Hi, I'm Tinu Vanapamula!</h2>
                 <p>Click <strong><Link className="index-link" to="/about">Here</Link></strong> to read more.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <div className="index-about">
+            <h4 className="about-text">
+                Hi, I'm Tinu Vanapamula!
+                I'm an 8th grader at Takoma Park Middle School and I'm very passionate about Computer Science.
+                Click <Link to="/about" className="text-link">Here</Link> to read more.
+            </h4>
+        </div>
     </div>
   );
 }
