@@ -19,6 +19,8 @@ function About() {
             &nbsp;&nbsp;&nbsp; Hi, I'm Tinu Vanapamula!
             I'm an 8th grader at Takoma Park Middle School and I'm very passionate about Computer Science.
             I have been interested in Computer Science ever since 6th grade.
+            Mr. Bhaskar Ganti played a huge role in my computer science career by mentoring me.
+            He is also the CEO of <a target = "blank" href = "http://issi-software.com" className="about-link">International Software Systems Inc</a>.
             Since then, I have learned Python, Javascript, and HTML.
             With this knowledge I have been actively participating Computer Science Competitions.
             So far, in my career, I have won the congressional app challenge in Maryland's District MD-03.
