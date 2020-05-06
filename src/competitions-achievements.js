@@ -22,6 +22,7 @@ function CompetitionsAchievements() {
 
             <Collapse in={year2020}>
                 <div>
+                    <h3 className="competition">May - Invited to 2019-2020 <a className="competition-link" target = "blank" href = "https://acsl.org">ACSL</a> Junior Division Finals</h3>
                     <h3 className="competition">March - <a className = "competition-link" href = "https://secwww.jhuapl.edu/stem/mesa/winners/" target = "blank">3rd Place </a> JHU-APL MESA <a className = "competition-link" href = "https://secwww.jhuapl.edu/stem/mesa/school-based-program/competitions" target = "blank">NEDC Engineering Competition</a> (as <a className = "competition-link" href = "https://www.youtube.com/channel/UCO_5muSlEd5sDPZyKTuJbNA/" target = "blank">STEM Thunders</a>) </h3>
                 </div>
             </Collapse><br />
