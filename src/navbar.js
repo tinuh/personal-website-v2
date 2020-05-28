@@ -23,10 +23,8 @@ function NavbarComponent() {
                 <LinkContainer exact to="/school" onClick={() => setExpanded(false)}><NavLink>School</NavLink></LinkContainer>
                 <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink>Competitions & Achievements</NavLink></LinkContainer>
                 <LinkContainer exact to="/homework-manager" onClick={() => setExpanded(false)}><NavLink>Homework Manager</NavLink></LinkContainer>
-                <NavLink target = "blank" href="https://tools.tinu.tech" onClick={() => setExpanded(false)}>Tools</NavLink>
+                <LinkContainer exact to="/creations" onClick={() => setExpanded(false)}><NavLink onClick={() => setExpanded(false)}>Creations</NavLink></LinkContainer>
                 <LinkContainer exact to="/about" onClick={() => setExpanded(false)}><NavLink>About</NavLink></LinkContainer>
-
-
             </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -11,6 +11,7 @@ import About from "./about";
 import School from "./school";
 import NotFound from "./404";
 import CompetitionsAchievements from "./competitions-achievements";
+import Creations from "./creations";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path = "/school" component = {School} />
         <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements} />
         <Route exact path = "/homework-manager" component = {HomeworkManager} />
+        <Route exact path = "/creations" component = {Creations} />
         <Route exact path = "/about" component = {About} />
         <Route component={NotFound} />
       </Switch>

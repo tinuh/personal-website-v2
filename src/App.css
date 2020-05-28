@@ -227,3 +227,28 @@ body{
         display:none;
     }
 }
+
+.creation-card{
+  transition: 0.3s;
+}
+
+.creations-div{
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (min-width: 768px) {
+    .creation-card:hover {
+        transform: scale(1.075, 1.075);
+        box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+    }
+}
+
+@media (max-width: 768px){
+    .creations-div{
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
