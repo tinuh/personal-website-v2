@@ -32,8 +32,7 @@ function HomeworkManager() {
               className='homework-link' target="blank" href="http://homework.tinu.tech">Here</a> to visit the live site.
           Tinu Vanapamula is still working on developing this application to make it better overtime, that be it at a
           slower pace. </h3>
-      </div>
-
+      </div><br />
     </div>
   );
 }

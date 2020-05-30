@@ -7,7 +7,7 @@ import youtube from "./img/youtube.png";
 
 function Footer() {
   return (
-    <div className="Footer">
+    <div className="footer-div">
       <footer className="py-4 bg-dark text-white-50 fixed-bottom">
         <div className="container text-center">
           <a title="Github" href="https://github.com/tinuh" target="blank"><img className="icon" src={github} alt = "Github" /></a> &nbsp;
