@@ -12,11 +12,11 @@ function HomeworkManager() {
       <a className="heading" href="http://homework.tinu.tech" target="blank" title="Click to view the live site"><h1 className="heading">The Homework Manager</h1></a>
 
       <div className="homework-div">
-        <h3 className="homework-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Homework Manager is Tinu Vanapamula's
+        <h3 className="homework-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Homework Manager is my
           winning app for the <a className='homework-link' target="blank"
                                  href="https://www.congressionalappchallenge.us/">Congressional App Challenge</a> in
           2019 for <a className="homework-link" target="blank" href="https://www.congressionalappchallenge.us/19-MD03">District
-            MD-03</a>. He spent over 2 months developing this application on the Python Django Web-Framework. The
+            MD-03</a>. I spent over 2 months developing this application on the Python Django Web-Framework. The
           Homework Manager is an app for classrooms to manage homework, reminders, and announcements. Here is the video,
           which shows how this application is used. </h3>
         <div className="video">
@@ -26,12 +26,12 @@ function HomeworkManager() {
                     allowFullScreen></iframe>
           </div>
         </div>
-        <h3 className="homework-text">The inspiration for Tinu Vanapamula's app came from the classic agenda book he
-          use's in school every day. He thought about what would happen if he didn’t have to write down his homework
+        <h3 className="homework-text">The inspiration for my app came from the classic agenda book I
+          use in school every day. I thought about what would happen if I didn’t have to write down my homework
           every day, and assignments could be available online in a simplistic and organized fashion. Click <a
               className='homework-link' target="blank" href="http://homework.tinu.tech">Here</a> to visit the live site.
-          Tinu Vanapamula is still working on developing this application to make it better overtime, that be it at a
-          slower pace. </h3>
+          I am still working on developing this application to make it better overtime, that be it at a
+          slower pace. From the competition, I have made significant changes to the app by adding the ability to submit response/links. </h3>
       </div><br />
     </div>
   );

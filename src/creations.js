@@ -25,7 +25,7 @@ function Creations() {
                         This Is The Homework Manager.
                         A New Type Of Tool For Classrooms.
                         It Helps Classrooms Keep Track Of All Types Of Things Including Homework And Announcements.
-                        Click <Link to = "/homework-manager">Here</Link> to read more.
+                        Click <Link className = "index-link" to = "/homework-manager">Here</Link> to read more.
                     </Card.Text>
                     <center><a target = "blank" href = "http://homework.tinu.tech"><Button variant="outline-dark">Visit Live Site</Button></a></center>
                 </Card.Body>
