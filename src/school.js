@@ -34,7 +34,7 @@ function School() {
 
             <Collapse in={tpms}>
                 <div>
-                    <h4 className="school-text">I am a current 8th grader at <a className="school-link" href="https://www.montgomeryschoolsmd.org/schools/takomaparkms/" target="blank">Takoma Park Middle School</a>. I am attending the Magnet Math, Science, and Computer Science Program.</h4>
+                    <h4 className="school-text">I attended <a className="school-link" href="https://www.montgomeryschoolsmd.org/schools/takomaparkms/" target="blank">Takoma Park Middle School</a> from 2016 - 2020 for the Magnet Math, Science, and Computer Science Program.</h4>
                 </div>
             </Collapse><br />
 
