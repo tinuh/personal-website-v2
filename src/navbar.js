@@ -6,13 +6,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavLink from 'react-bootstrap/NavLink';
 import { LinkContainer } from "react-router-bootstrap";
 import { useState } from 'react';
+import "react-toggle/style.css";
+import Toggle from 'react-toggle';
+import dark from './img/dark.png';
+import light from './img/light.png';
 
-function NavbarComponent() {
+function NavbarComponent(props) {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div className="Navbar">
-      <Navbar expanded={expanded} fixed = "top" bg="dark" expand="lg" className = "navbar-dark">
+      <Navbar expanded={expanded} fixed = "top" bg={props.theme} expand="lg" className = {props.theme === "dark" ? "navbar-dark" : "navbar-light"}>
         <LinkContainer exact to = "/">
             <Navbar.Brand>Tinu Vanapamula</Navbar.Brand>
         </LinkContainer>
@@ -25,6 +29,21 @@ function NavbarComponent() {
                 <LinkContainer exact to="/homework-manager" onClick={() => setExpanded(false)}><NavLink>Homework Manager</NavLink></LinkContainer>
                 <LinkContainer exact to="/creations" onClick={() => setExpanded(false)}><NavLink onClick={() => setExpanded(false)}>Creations</NavLink></LinkContainer>
                 <LinkContainer exact to="/about" onClick={() => setExpanded(false)}><NavLink>About</NavLink></LinkContainer>
+                <NavLink>{props.theme === "dark" ?
+                    <Toggle
+                            onChange={() => props.toggle()}
+                            checked={true}
+                            icons={{checked: <img alt = "dark" className='themeicon' src={dark} />, unchecked: <img alt = "light" className='themeicon' src={light} />}}
+                    />
+                    :
+                    <Toggle
+                            onChange={() => props.toggle()}
+                            checked={false}
+                            icons={{checked: <img alt = "dark"  className='themeicon' src={dark} />, unchecked: <img alt = "light" className='themeicon' src={light} />}}
+                    />
+                }</NavLink>
+
+
             </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
 import NavbarComponent from "./navbar";
 import Home from "./home";
 import Footer from "./footer";
@@ -12,13 +10,30 @@ import School from "./school";
 import NotFound from "./404";
 import CompetitionsAchievements from "./competitions-achievements";
 import Creations from "./creations";
+import { useState } from 'react';
 
 
 function App() {
+  if (localStorage.getItem("theme") === null){
+    localStorage.setItem("theme", 'dark');
+  }
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+
+  function toggle() {
+    if (theme==="dark") {
+      setTheme("light");
+      localStorage.setItem("theme", 'light');
+    }
+    else {
+        setTheme('dark');
+        localStorage.setItem("theme", 'dark');
+    }
+  }
+
   return (
     <Router>
     <div className="App">
-      <NavbarComponent />
+      <NavbarComponent theme = {theme} toggle = {toggle}/>
 
       <Switch>
         <Route exact path = "/" component = {Home} />
@@ -30,7 +45,7 @@ function App() {
         <Route component={NotFound} />
       </Switch>
 
-      <Footer />
+      <Footer theme = {theme}/>
     </div>
     </Router>
   );

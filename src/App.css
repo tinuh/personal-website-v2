@@ -252,3 +252,16 @@ body{
         margin-right: 5%;
     }
 }
+
+.footer-text-dark{
+    color: #FFFFFF80
+}
+
+.footer-text-light{
+    color: #000000E6;
+}
+
+.themeicon{
+    border-radius: 50%;
+    width: 10px
+}

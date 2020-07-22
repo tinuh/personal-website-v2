@@ -21,9 +21,9 @@ function About() {
             I have been interested in Computer Science ever since 6th grade.
             Mr. Bhaskar Ganti played a huge role in my computer science career by mentoring me.
             He is also the CEO of <a target = "blank" href = "http://issi-software.com" className="about-link">International Software Systems Inc</a>.
-            Since then, I have learned Python, Javascript, and HTML.
+            Since then, I have learned Python, Javascript, and HTML, and a few web development frameworks.
             With this knowledge I have been actively participating Computer Science Competitions.
-            So far, in my career, I have won the congressional app challenge in Maryland's District MD-03.
+            So far, in my career, I have won the <a target = "blank" href = "https://www.congressionalappchallenge.us/" className="about-link">Congressional App Challenge</a> in Maryland's District MD-03.
             I developed a web-application called the Homework Manager.
             You can learn more about that <Link className="about-link" to="/homework-manager">Here</Link>.
             Additionally, I have participated in an Engineering Challenge at John's Hopkins Applied Physics lab.
