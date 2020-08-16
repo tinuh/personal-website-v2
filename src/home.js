@@ -28,7 +28,7 @@ function Home() {
         <div className="index-about">
             <h4 className="about-text">
                 Hi, I'm Tinu Vanapamula!
-                I'm an 8th grader at Takoma Park Middle School and I'm very passionate about Computer Science.
+                I'm an upcoming 9th grader at Montgomery Blair High School and I'm very passionate about Computer Science.
                 Click <Link to="/about" className="text-link">Here</Link> to read more.
             </h4>
         </div>
