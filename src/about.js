@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import aboutIMG from "./img/about.jpg";
 import {Link} from "react-router-dom";
+import Resume from "./img/Tinu's Professional Resume.pdf";
 
 function About() {
   document.title = "About - Tinu Vanapamula";
@@ -12,12 +13,12 @@ function About() {
 
       <div className="about-outer">
         <div className="about-inner">
-          <img className="about-img" src={aboutIMG} alt = "About IMG"></img>
+          <a href = {Resume} target="blank"><img className="about-img"  src={aboutIMG} style = {{borderRadius: "50%"}} alt = "About IMG"></img></a>
         </div>
         <div className="about-body">
           <h4 className="about-text">
             &nbsp;&nbsp;&nbsp; Hi, I'm Tinu Vanapamula!
-            I'm an upcoming 9th grader at Montgomery Blair High School and I'm very passionate about Computer Science.
+            I'm an Freshman at Montgomery Blair High School and I'm very passionate about Computer Science.
             I have been interested in Computer Science ever since 6th grade.
             {/* Mr. Bhaskar Ganti played a huge role in my computer science career by mentoring me.
             He is also the CEO of <a target = "blank" href = "http://issi-software.com" className="about-link">International Software Systems Inc</a>. */}

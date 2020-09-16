@@ -24,7 +24,7 @@ function School() {
 
             <Collapse in={blair}>
                 <div>
-                    <h4 className="school-text">I am a Upcoming 9th grader at <a className="school-link" href="https://mbhs.edu/" target="blank">Montgomery Blair High School</a> for the 2020-2021 school year. I will be attending the Magnet Math, Science, and Computer Science Program. </h4>
+                    <h4 className="school-text">I am a Freshman at <a className="school-link" href="https://mbhs.edu/" target="blank">Montgomery Blair High School</a> for the 2020-2021 school year. I will be attending the Magnet Math, Science, and Computer Science Program. </h4>
                 </div>
             </Collapse><br />
 
