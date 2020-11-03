@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 
 function App() {
-  if (localStorage.getItem("theme") === null){
+  if (localStorage.getItem("theme") !== "light" | localStorage.getItem("theme") !== "dark"){
     localStorage.setItem("theme", 'dark');
   }
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
@@ -40,7 +40,7 @@ function App() {
         <Route exact path = "/school" component = {School} />
         <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements} />
         <Route exact path = "/homework-manager" component = {HomeworkManager} />
-        <Route exact path = "/creations" component = {Creations} />
+        <Route exact path = "/creations" component = {() => (<Creations theme = {theme} />)} />
         <Route exact path = "/about" component = {About} />
         <Route component={NotFound} />
       </Switch>

@@ -24,7 +24,7 @@ body{
 }
 
 .competition-link{
-    color: #c4c4c4;
+    color: #08e8de;
 }
 
 .competition-link:hover{
@@ -33,7 +33,7 @@ body{
 }
 
 .school-link{
-    color: #c4c4c4;
+    color: #08e8de;
 }
 
 .school-link:hover{
@@ -105,7 +105,7 @@ body{
 }
 
 .about-link{
-    color: #c4c4c4;
+    color: #08e8de;
 }
 
 .about-link:hover{
@@ -136,7 +136,7 @@ body{
 }
 
 .homework-link{
-    color: #c4c4c4;
+    color: #08e8de;
 }
 
 .homework-link:hover{
@@ -197,7 +197,7 @@ body{
 }
 
 .text-link{
-    color: #c4c4c4;
+    color: #08e8de;
 }
 
 .text-link:hover{
@@ -240,7 +240,7 @@ body{
 
 @media (min-width: 768px) {
     .creation-card:hover {
-        transform: scale(1.075, 1.075);
+        transform: scale(1.01, 1.01);
         box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
     }
 }
