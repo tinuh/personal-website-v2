@@ -1,8 +1,12 @@
 body{
   background: linear-gradient(to right, #03827b, #c45a21);
-  margin-top: 67.5px !important;
   margin-bottom: 77.5px !important;
 }
+
+.actual-content{
+    margin-top: 67.5px !important;
+}
+
 .heading{
     color: #ffffff;
     text-align: center;
@@ -216,17 +220,6 @@ body{
     margin-right: 2%;
   }
 
-@media (min-width: 768px) {
-  .index-about{
-      display:none;
-  }
-}
-
-@media (max-width: 768px) {
-    .carousel-caption{
-        display:none;
-    }
-}
 
 .creation-card{
   transition: 0.3s;
@@ -239,17 +232,12 @@ body{
 }
 
 @media (min-width: 768px) {
+    .index-about{
+        display:none;
+    }
     .creation-card:hover {
         transform: scale(1.01, 1.01);
         box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-    }
-}
-
-@media (max-width: 768px){
-    .creations-div{
-        margin-top: 20px;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 }
 
@@ -264,4 +252,29 @@ body{
 .themeicon{
     border-radius: 50%;
     width: 10px
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+.footer-icons{
+    display: inline-block;
+}
+
+@media (max-width: 768px){
+    .carousel-caption{
+        display:none;
+    }
+    .creations-div{
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    body {
+        margin-bottom: 110px !important;
+    }
+    .footer-icons{
+        display: block;
+    }
 }

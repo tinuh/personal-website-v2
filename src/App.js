@@ -11,7 +11,10 @@ import NotFound from "./404";
 import CompetitionsAchievements from "./competitions-achievements";
 import Creations from "./creations";
 import { useState } from 'react';
-
+import 'react-notifications-component/dist/theme.css';
+import ReactNotification from 'react-notifications-component';
+import { store } from 'react-notifications-component';
+import 'animate.css/animate.compat.css'
 
 function App() {
   if (localStorage.getItem("theme") !== "light" | localStorage.getItem("theme") !== "dark"){
@@ -30,23 +33,42 @@ function App() {
     }
   }
 
+  React.useEffect(() => {
+    store.addNotification({
+      title: "Success",
+      message: "Welcome to My Website!",
+      type: "success",
+      insert: "top",
+      isMobile: true,
+      container: "top-right",
+      animationIn: ["animated", "flipInX"],
+      animationOut: ["animated", "flipOutX"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true,
+        showIcon: true
+      },
+    });
+  }, []);
+
   return (
     <Router>
-    <div className="App">
-      <NavbarComponent theme = {theme} toggle = {toggle}/>
+      <div className="App">
+        <ReactNotification />
+        <NavbarComponent theme = {theme} toggle = {toggle}/>
+          <br/><br/><br/>
+          <Switch>
+            <Route exact path = "/" component = {Home} />
+            <Route exact path = "/school" component = {School} />
+            <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements} />
+            <Route exact path = "/homework-manager" component = {HomeworkManager} />
+            <Route exact path = "/creations" component = {() => (<Creations theme = {theme} />)} />
+            <Route exact path = "/about" component = {About} />
+            <Route component={NotFound} />
+          </Switch>
 
-      <Switch>
-        <Route exact path = "/" component = {Home} />
-        <Route exact path = "/school" component = {School} />
-        <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements} />
-        <Route exact path = "/homework-manager" component = {HomeworkManager} />
-        <Route exact path = "/creations" component = {() => (<Creations theme = {theme} />)} />
-        <Route exact path = "/about" component = {About} />
-        <Route component={NotFound} />
-      </Switch>
-
-      <Footer theme = {theme}/>
-    </div>
+        <Footer theme = {theme}/>
+      </div>
     </Router>
   );
 }

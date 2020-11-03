@@ -4,16 +4,34 @@ import { useState } from "react";
 import { Collapse } from "react-bootstrap";
 import Alert from "./alert"
 import {Link} from "react-router-dom";
+import { store } from 'react-notifications-component';
 
 function CompetitionsAchievements() {
   const [year2020, set2020] = useState(false);
   const [year2019, set2019] = useState(false);
   const [year2016, set2016] = useState(false);
-  document.title = "Competitions & Achievements - Tinu Vanapamula";
+
+  React.useEffect(() => {
+    document.title = "Competitions & Achievements - Tinu Vanapamula";
+    store.addNotification({
+      title: "Hint",
+      message: "Click on the year to learn more",
+      type: "info",
+      insert: "top",
+      isMobile: true,
+      container: "top-right",
+      animationIn: ["animated", "flipInX"],
+      animationOut: ["animated", "flipOutX"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true,
+        showIcon: true
+      },
+    });
+  }, []);
 
   return (
     <div className="404">
-      <Alert message = "Click on the year to see more" type = "primary" dismiss = "5000" hint/>
       <h1 className="heading">Competitions & Achievements</h1>
 
       <div className="competition-div">
@@ -45,7 +63,7 @@ function CompetitionsAchievements() {
               <div>
                   <h3 className="competition">April - Got my 1st Degree Black Belt in Tae-Kwon-Do (at <a className="competition-link" href="http://musamd.com" target="blank">Musa Martial Arts</a>)</h3>
               </div>
-          </Collapse><br/>
+          </Collapse>
 
       </div>
     </div>

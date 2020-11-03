@@ -1,9 +1,29 @@
 import React from 'react';
 import './App.css';
 import Message from "./alert";
+import { store } from 'react-notifications-component';
 
 function HomeworkManager() {
-  document.title = "Homework Manager - Tinu Vanapamula";
+  
+
+  React.useEffect(() => {
+    document.title = "Homework Manager - Tinu Vanapamula";
+    store.addNotification({
+      title: "Live Site",
+      message: "Click on title to go to the Live Site",
+      type: "default",
+      insert: "top",
+      isMobile: true,
+      container: "top-right",
+      animationIn: ["animated", "flipInX"],
+      animationOut: ["animated", "flipOutX"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true,
+        showIcon: true
+      },
+    });
+  }, []);
 
   return (
     <div className="App">

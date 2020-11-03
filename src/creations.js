@@ -23,8 +23,8 @@ function Creations(props) {
                 <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={digital_fit} />
                   <Card.Body>
-                      <Card.Title>Digital Fit</Card.Title>
-                      <Card.Text>
+                      <center><Card.Title>Digital Fit</Card.Title></center>
+                      <Card.Text style = {{fontSize: '16px'}}>
                         Digital Fit is a web application that reminds anyone who uses their computer to take occasional breaks to prevent eye strain & chronic pain.
                         It also includes tools that help you to breath and exercise.
                       </Card.Text>
@@ -37,8 +37,8 @@ function Creations(props) {
                 <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={homework_img} />
                   <Card.Body>
-                      <Card.Title>Homework Manager</Card.Title>
-                      <Card.Text>
+                      <center><Card.Title>Homework Manager</Card.Title></center>
+                      <Card.Text style = {{fontSize: '16px'}}>
                           This Is The Homework Manager.
                           A New Type Of Tool For Classrooms.
                           It Helps Classrooms Keep Track Of All Types Of Things Including Homework And Announcements.
@@ -53,8 +53,8 @@ function Creations(props) {
                 <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={embeder} />
                   <Card.Body>
-                      <Card.Title>Youtube Embeder</Card.Title>
-                      <Card.Text>
+                      <center><Card.Title>Youtube Embeder</Card.Title></center>
+                      <Card.Text style = {{fontSize: '16px'}}>
                           The Youtube Embeder is a tool for in-school use.
                           It takes the input of a youtube link and opens a tab with an embeded version.
                           This allows students at school to view academically relevant videos.
@@ -68,8 +68,8 @@ function Creations(props) {
               <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
                 <Card.Img variant="top" src={reflex} />
                 <Card.Body>
-                    <Card.Title>Reflex Game</Card.Title>
-                    <Card.Text>
+                    <center><Card.Title>Reflex Game</Card.Title></center>
+                    <Card.Text style = {{fontSize: '16px'}}>
                         This Reflex Game requires thinking and is designed to test both your reflex and ability to predict.
                         The challenge is get the pebble in the center of the bar with a dynamic boost after you click on stop.
                     </Card.Text>

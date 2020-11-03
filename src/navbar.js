@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from 'react-bootstrap/Nav';
+import {Nav as BNav} from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import NavLink from 'react-bootstrap/NavLink';
 import { LinkContainer } from "react-router-bootstrap";
@@ -22,7 +22,7 @@ function NavbarComponent(props) {
         </LinkContainer>
         <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <BNav className="mr-auto">
                 <LinkContainer exact to="/" onClick={() => setExpanded(false)}><NavLink>Home</NavLink></LinkContainer>
                 <LinkContainer exact to="/school" onClick={() => setExpanded(false)}><NavLink>School</NavLink></LinkContainer>
                 <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink>Competitions & Achievements</NavLink></LinkContainer>
@@ -44,9 +44,12 @@ function NavbarComponent(props) {
                 }</NavLink>
 
 
-            </Nav>
+            </BNav>
             </Navbar.Collapse>
         </Navbar>
+        
+
+
     </div>
   );
 }

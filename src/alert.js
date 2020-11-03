@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Alert from 'react-bootstrap/Alert';
 
+
 function Message(props) {
   const [show, setShow] = useState(true);
   var message = props.message;

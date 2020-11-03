@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {Collapse} from "react-bootstrap";
 import Alert from "./alert";
 import { useState } from 'react';
+import { store } from 'react-notifications-component';
 
 function School() {
   const [blair, setBlair] = useState(false);
@@ -12,9 +13,27 @@ function School() {
   const [bes, setBes] = useState(false);
   document.title = "School - Tinu Vanapamula";
 
+  React.useEffect(() => {
+    store.addNotification({
+      title: "Hint",
+      message: "Click on the School to learn more.",
+      type: "info",
+      insert: "top",
+      isMobile: true,
+      container: "top-right",
+      animationIn: ["animated", "flipInX"],
+      animationOut: ["animated", "flipOutX"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true,
+        showIcon: true
+      },
+    });
+  }, []);
+
   return (
     <div className="School">
-      <Alert message = "Click on the School to see more" type = "primary" dismiss = "5000" hint/>
+      {/* <Alert message = "Click on the School to see more" type = "primary" dismiss = "5000" hint/> */}
       <h1 className="heading">School</h1>
 
       <div className="school-div">

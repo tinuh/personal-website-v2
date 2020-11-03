@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div className="Home">
-        <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" />
+        {/* <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" /> */}
 
         <Carousel>
           <Carousel.Item>
