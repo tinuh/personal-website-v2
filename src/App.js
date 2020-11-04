@@ -17,7 +17,7 @@ import { store } from 'react-notifications-component';
 import 'animate.css/animate.compat.css'
 
 function App() {
-  if (localStorage.getItem("theme") !== "light" | localStorage.getItem("theme") !== "dark"){
+  if (localStorage.getItem("theme") !== "light" && localStorage.getItem("theme") !== "dark"){
     localStorage.setItem("theme", 'dark');
   }
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
