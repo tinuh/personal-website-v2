@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Carousel from "react-bootstrap/Carousel";
 import Picture from "./img/new_york.jpg"
-import Message from "./alert";
+//import Message from "./alert";
 import {Link} from "react-router-dom";
 
 function Home() {

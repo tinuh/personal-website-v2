@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Message from "./alert";
+//import Message from "./alert";
 import { store } from 'react-notifications-component';
 
 function HomeworkManager() {

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Link} from "react-router-dom";
 import {Collapse} from "react-bootstrap";
-import Alert from "./alert";
+//import Alert from "./alert";
 import { useState } from 'react';
 import { store } from 'react-notifications-component';
 

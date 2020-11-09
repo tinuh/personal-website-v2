@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import aboutIMG from "./img/about.jpg";
+import aboutIMG from "./img/about.png";
 import {Link} from "react-router-dom";
 import Resume from "./img/Tinu's Professional Resume.pdf";
 
