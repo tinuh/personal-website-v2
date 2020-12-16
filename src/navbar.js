@@ -25,10 +25,11 @@ function NavbarComponent(props) {
             <BNav className="mr-auto">
                 <LinkContainer exact to="/" onClick={() => setExpanded(false)}><NavLink>Home</NavLink></LinkContainer>
                 <LinkContainer exact to="/school" onClick={() => setExpanded(false)}><NavLink>School</NavLink></LinkContainer>
-                <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink>Competitions & Achievements</NavLink></LinkContainer>
-                <LinkContainer exact to="/homework-manager" onClick={() => setExpanded(false)}><NavLink>Homework Manager</NavLink></LinkContainer>
+                <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink>Achievements</NavLink></LinkContainer>
+                {/* <LinkContainer exact to="/homework-manager" onClick={() => setExpanded(false)}><NavLink>Homework Manager</NavLink></LinkContainer> */}
                 <LinkContainer exact to="/creations" onClick={() => setExpanded(false)}><NavLink onClick={() => setExpanded(false)}>Creations</NavLink></LinkContainer>
                 <LinkContainer exact to="/about" onClick={() => setExpanded(false)}><NavLink>About</NavLink></LinkContainer>
+                <LinkContainer exact to="/contact" onClick={() => setExpanded(false)}><NavLink>Contact</NavLink></LinkContainer>
                 <NavLink>{props.theme === "dark" ?
                     <Toggle
                             onChange={() => props.toggle()}
