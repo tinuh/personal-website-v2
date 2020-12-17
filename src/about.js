@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import aboutIMG from "./img/about.png";
+import aboutIMG from "./assets/about.png";
 import {Link} from "react-router-dom";
-import Resume from "./img/Tinu's Professional Resume.pdf";
+import Resume from "./assets/Tinu's Professional Resume.pdf";
 
 function About() {
   document.title = "About - Tinu Vanapamula";

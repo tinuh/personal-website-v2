@@ -4,10 +4,10 @@ import { Card } from "react-bootstrap";
 //import { CardDeck } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import homework_img from "./img/homework-manager.jpg";
-import digital_fit from "./img/digital_fit.png";
-import embeder from "./img/embeder.jpg";
-import reflex from "./img/reflex.jpg";
+import homework_img from "./assets/homework-manager.jpg";
+import digital_fit from "./assets/digital_fit.png";
+import embeder from "./assets/embeder.jpg";
+import reflex from "./assets/reflex.jpg";
 
 function Creations(props) {
   document.title = "Creations - Tinu Vanapamula";

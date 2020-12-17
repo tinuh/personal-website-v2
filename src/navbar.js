@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './img/bootstrap.min.css';
+import './assets/bootstrap.min.css';
 import {Nav as BNav} from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import NavLink from 'react-bootstrap/NavLink';
@@ -8,8 +8,8 @@ import { LinkContainer } from "react-router-bootstrap";
 import { useState } from 'react';
 import "react-toggle/style.css";
 import Toggle from 'react-toggle';
-import dark from './img/dark.png';
-import light from './img/light.png';
+import dark from './assets/dark.png';
+import light from './assets/light.png';
 
 function NavbarComponent(props) {
   const [expanded, setExpanded] = useState(false);

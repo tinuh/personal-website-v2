@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import instagram from "./img/instagram.png";
-import github_dark from "./img/github.png";
-import github_light from "./img/github-light.png";
-import youtube from "./img/youtube.png";
-import linkedin from "./img/linkedln.png"
+import instagram from "./assets/instagram.png";
+import github_dark from "./assets/github.png";
+import github_light from "./assets/github-light.png";
+import youtube from "./assets/youtube.png";
+import linkedin from "./assets/linkedln.png"
 
 
 function Footer(props) {
