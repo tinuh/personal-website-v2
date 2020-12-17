@@ -18,7 +18,7 @@ function School() {
       title: "Hint",
       message: "Click on the School to learn more.",
       type: "info",
-      insert: "top",
+      insert: "bottom",
       isMobile: true,
       container: "bottom-right",
       animationIn: ["animated", "flipInX"],
@@ -32,7 +32,7 @@ function School() {
   }, []);
 
   return (
-    <div className="School">
+    <div className="content">
       {/* <Alert message = "Click on the School to see more" type = "primary" dismiss = "5000" hint/> */}
       <h1 className="heading">School</h1>
 

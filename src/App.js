@@ -15,6 +15,7 @@ import 'react-notifications-component/dist/theme.css';
 import ReactNotification from 'react-notifications-component';
 import { store } from 'react-notifications-component';
 import 'animate.css/animate.compat.css'
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 function App() {
   if (localStorage.getItem("theme") !== "light" && localStorage.getItem("theme") !== "dark"){
@@ -38,7 +39,7 @@ function App() {
       title: "Success",
       message: "Welcome to My Website!",
       type: "success",
-      insert: "top",
+      insert: "bottom",
       isMobile: true,
       container: "bottom-right",
       animationIn: ["animated", "flipInX"],
@@ -53,19 +54,30 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <ReactNotification />
-        <NavbarComponent theme = {theme} toggle = {toggle}/>
-          <br/><br/><br/><br/>
-          <Switch>
-            <Route exact path = "/" component = {Home} />
-            <Route exact path = "/school" component = {School} />
-            <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements} />
-            <Route exact path = "/homework-manager" component = {HomeworkManager} />
-            <Route exact path = "/creations" component = {() => (<Creations theme = {theme} />)} />
-            <Route exact path = "/about" component = {About} />
-            <Route component={NotFound} />
-          </Switch>
+       <div className="App">
+          <ReactNotification />
+          <NavbarComponent theme = {theme} toggle = {toggle}/>
+
+          <div className = "actual-content">
+            <Route render={({ location }) => (
+              
+              
+              <TransitionGroup>
+                <CSSTransition key={location.pathname} timeout={300} classNames = 'fade' >
+                  
+                  <Switch location={location}>
+                    <Route exact path = "/" component = {Home} />
+                    <Route exact path = "/school" component = {School} />
+                    <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements} />
+                    <Route exact path = "/homework-manager" component = {HomeworkManager} />
+                    <Route exact path = "/creations" component = {() => (<Creations theme = {theme} />)} />
+                    <Route exact path = "/about" component = {About} />
+                    <Route component={NotFound} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )} />
+          </div>
 
         <Footer theme = {theme}/>
       </div>

@@ -12,7 +12,7 @@ function HomeworkManager() {
       title: "Live Site",
       message: "Click on title to go to the Live Site",
       type: "default",
-      insert: "top",
+      insert: "bottom",
       isMobile: true,
       container: "bottom-right",
       animationIn: ["animated", "flipInX"],
@@ -26,7 +26,7 @@ function HomeworkManager() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="content">
       {/* <Message type = "info" message = "to view see the live site" dismiss = "5000" link = "http://homework.tinu.tech"/> */}
 
       <a className="heading" href="http://homework.tinu.tech" target="blank" title="Click to view the live site"><h1 className="heading">The Homework Manager</h1></a>

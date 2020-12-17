@@ -12,7 +12,7 @@ function Creations(props) {
   document.title = "Creations - Tinu Vanapamula";
 
   return (
-    <div className="Creations">
+    <div className="content">
       <h1 className="heading">My Creations</h1>
 
       <div className = "creations-div">

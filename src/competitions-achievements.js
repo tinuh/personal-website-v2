@@ -17,7 +17,7 @@ function CompetitionsAchievements() {
       title: "Hint",
       message: "Click on the year to learn more",
       type: "info",
-      insert: "top",
+      insert: "bottom",
       isMobile: true,
       container: "bottom-right",
       animationIn: ["animated", "flipInX"],
@@ -31,7 +31,7 @@ function CompetitionsAchievements() {
   }, []);
 
   return (
-    <div className="404">
+    <div className="content">
       <h1 className="heading">Competitions & Achievements</h1>
 
       <div className="competition-div">

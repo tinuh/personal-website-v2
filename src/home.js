@@ -9,7 +9,7 @@ function Home() {
   document.title = "Tinu Vanapamula";
 
   return (
-    <div className="Home">
+    <div className="content">
         {/* <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" /> */}
 
         {/* <Carousel>
