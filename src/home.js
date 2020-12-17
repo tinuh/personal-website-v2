@@ -12,7 +12,7 @@ function Home() {
     <div className="Home">
         {/* <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" /> */}
 
-        <Carousel>
+        {/* <Carousel>
           <Carousel.Item>
             <img
               className="d-block w-100"
@@ -31,7 +31,7 @@ function Home() {
                 I'm an Freshman at Montgomery Blair High School and I'm very passionate about Computer Science.
                 Click <Link to="/about" className="text-link">Here</Link> to read more.
             </h4>
-        </div>
+        </div> */}
     </div>
   );
 }

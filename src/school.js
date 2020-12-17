@@ -20,7 +20,7 @@ function School() {
       type: "info",
       insert: "top",
       isMobile: true,
-      container: "top-right",
+      container: "bottom-right",
       animationIn: ["animated", "flipInX"],
       animationOut: ["animated", "flipOutX"],
       dismiss: {

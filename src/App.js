@@ -40,7 +40,7 @@ function App() {
       type: "success",
       insert: "top",
       isMobile: true,
-      container: "top-right",
+      container: "bottom-right",
       animationIn: ["animated", "flipInX"],
       animationOut: ["animated", "flipOutX"],
       dismiss: {
@@ -56,7 +56,7 @@ function App() {
       <div className="App">
         <ReactNotification />
         <NavbarComponent theme = {theme} toggle = {toggle}/>
-          <br/><br/><br/>
+          <br/><br/><br/><br/>
           <Switch>
             <Route exact path = "/" component = {Home} />
             <Route exact path = "/school" component = {School} />

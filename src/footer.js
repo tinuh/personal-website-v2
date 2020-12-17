@@ -18,7 +18,7 @@ function Footer(props) {
 
   return (
     <div className="footer-div">
-      <footer className= {props.theme === "dark" ? "py-4 bg-dark text-white-50 fixed-bottom" : "py-4 bg-light text-white-50 fixed-bottom"}>
+      <footer className= {props.theme === "dark" ? "py-4 bg-dark text-white-50 fixed-bottom" : "py-4 bg-light text-white-50 fixed-bottom"} style={{background: 'linear-gradient(90deg, var(--light), 0%, var(--cyan) 0%, var(--danger) 100%), var(--blue)'}}>
         <div className="container text-center">
 
           <div className = "footer-icons">
