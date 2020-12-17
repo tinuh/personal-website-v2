@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import './assets/bootstrap.min.css';
 import {Nav as BNav} from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import NavLink from 'react-bootstrap/NavLink';
