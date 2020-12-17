@@ -5,7 +5,7 @@ import {Button} from "react-bootstrap";
 
 function NotFound() {
   return (
-    <div className="404">
+    <div className="content">
       <h1 className="heading">404</h1>
       <h4 className="heading">Page Not Found</h4><br />
 

@@ -19,7 +19,7 @@ function Creations(props) {
           <div className="row">
 
               <div className = "col-md-4">
-                <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
+                <Card className = {props.theme === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={digital_fit} />
                   <Card.Body>
                       <center><Card.Title>Digital Fit</Card.Title></center>
@@ -33,7 +33,7 @@ function Creations(props) {
               </div>
 
               <div className = "col-md-4">
-                <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
+                <Card className = {props.theme === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={homework_img} />
                   <Card.Body>
                       <center><Card.Title>Homework Manager</Card.Title></center>
@@ -49,7 +49,7 @@ function Creations(props) {
               </div>
 
               <div className = "col-md-4">
-                <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
+                <Card className = {props.theme === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={embeder} />
                   <Card.Body>
                       <center><Card.Title>Youtube Embeder</Card.Title></center>
@@ -64,7 +64,7 @@ function Creations(props) {
               </div>
 
               <div className = "col-md-4">
-              <Card className = {props.theme === "light" ? "creation-card" : "creation-card text-white bg-dark mb-3"}>
+              <Card className = {props.theme === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
                 <Card.Img variant="top" src={reflex} />
                 <Card.Body>
                     <center><Card.Title>Reflex Game</Card.Title></center>
@@ -74,10 +74,10 @@ function Creations(props) {
                     </Card.Text>
                     <center><a target = "blank" href = "http://reflex.tinu.tech"><Button variant={props.theme === "light" ? "outline-dark" : "outline-light"}>Play game</Button></a></center>
                 </Card.Body>
-              </Card><br/>
+              </Card>
               </div>
           </div>
-      </div> <br />
+      </div><br/>
     </div>
   );
 }

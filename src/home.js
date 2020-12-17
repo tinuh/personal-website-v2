@@ -4,12 +4,17 @@ import './App.css';
 //import Picture from "./assets/new_york.jpg"
 //import Message from "./alert";
 //import {Link} from "react-router-dom";
+import aboutIMG from "./assets/backgroundless.png";
+import {Link} from 'react-router-dom';
 
 function Home() {
   document.title = "Tinu Vanapamula";
 
   return (
     <div className="content">
+        <div className="about-inner" style = {{textAlign: 'center'}}>
+          <Link to = "/about"><img className="about-img"  src={aboutIMG} alt = "About IMG"></img></Link>
+        </div>
         {/* <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" /> */}
 
         {/* <Carousel>

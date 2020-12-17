@@ -6,7 +6,7 @@ import {Collapse} from "react-bootstrap";
 import { useState } from 'react';
 import { store } from 'react-notifications-component';
 
-function School() {
+function School(props) {
   const [blair, setBlair] = useState(false);
   const [tpms, setTpms] = useState(false);
   const [drew, setDrew] = useState(false);
@@ -39,7 +39,7 @@ function School() {
       <div className="school-div">
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={blair} onClick={() => setBlair(!blair)}>Montgomery Blair High School</Link></h2>
-        <hr color="#ffffff" />
+        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={blair}>
                 <div>
@@ -49,7 +49,7 @@ function School() {
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={tpms} onClick={() => setTpms(!tpms)}>Takoma Park Middle School</Link></h2>
-        <hr color="#ffffff" />
+        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={tpms}>
                 <div>
@@ -59,7 +59,7 @@ function School() {
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={drew} onClick={() => setDrew(!drew)}>Dr. Charles R. Drew Elementary School</Link></h2>
-        <hr color="#ffffff" />
+        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={drew}>
                 <div>
@@ -69,7 +69,7 @@ function School() {
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={bes} onClick={() => setBes(!bes)}>Burtonsville Elementary School</Link></h2>
-        <hr color="#ffffff" />
+        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"}/>
 
             <Collapse in={bes}>
                 <div>

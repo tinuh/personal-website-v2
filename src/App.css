@@ -1,30 +1,15 @@
-body{
-  background: linear-gradient(to right, #03827b, #c45a21);
-  margin-bottom: 77.5px !important;
-}
-
 .actual-content{
     padding-top: 95px !important;
 }
 
 .heading{
-    color: #ffffff;
     text-align: center;
     text-decoration: none;
 }
 
 .heading:hover{
-    color: #ffffff;
     text-align: center;
     text-decoration: none;
-}
-
-.sub-heading{
-    color: #ffffff;
-}
-
-.competition{
-    color: #ffffff;
 }
 
 .competition-link{
@@ -49,6 +34,10 @@ body{
     margin-top: 32.5px;
     margin-left: 2%;
     margin-right: 2%;
+}
+
+.sub-heading{
+    color: inherit;
 }
 
 .school-div{
@@ -104,10 +93,6 @@ body{
   }
 }
 
-.about-text{
-    color: #ffffff;
-}
-
 .about-link{
     color: #08e8de;
 }
@@ -117,13 +102,6 @@ body{
     text-decoration: none;
 }
 
-.school-text{
-    color: #ffffff;
-}
-
-.toggle-collapse{
-    color: #ffffff !important;
-}
 
 .toggle-collapse:hover{
     color: #ed594e !important;
@@ -151,10 +129,6 @@ body{
 .homework-div{
     margin-left: 2%;
     margin-right: 2%;
-}
-
-.homework-text{
-    color: #ffffff;
 }
 
 
@@ -223,6 +197,7 @@ body{
 
 .creation-card{
   transition: 0.3s;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.25), -1px -1px 10px 5px rgba(0, 0, 0, 0.22);
 }
 
 .creations-div{
@@ -238,6 +213,15 @@ body{
     .creation-card:hover {
         transform: scale(1.01, 1.01);
         box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+    }
+    .navbar-item:hover {
+        transform: scale(1.05, 1.05);
+        transition: 0.3s;
+    }
+
+    .icon:hover {
+        transform: scale(1.1, 1.1);
+        transition: 0.3s;
     }
 }
 

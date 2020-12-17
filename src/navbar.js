@@ -22,13 +22,13 @@ function NavbarComponent(props) {
         <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <BNav className="ml-auto navbar nav">
-                <LinkContainer exact to="/" onClick={() => setExpanded(false)}><NavLink >Home</NavLink></LinkContainer>
-                <LinkContainer exact to="/school" onClick={() => setExpanded(false)}><NavLink>School</NavLink></LinkContainer>
-                <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink>Achievements</NavLink></LinkContainer>
-                <LinkContainer exact to="/creations" onClick={() => setExpanded(false)}><NavLink onClick={() => setExpanded(false)}>Creations</NavLink></LinkContainer>
-                <LinkContainer exact to="/about" onClick={() => setExpanded(false)}><NavLink>About</NavLink></LinkContainer>
-                <LinkContainer exact to="/contact" onClick={() => setExpanded(false)}><NavLink>Contact</NavLink></LinkContainer>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <LinkContainer exact to="/" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Home</NavLink></LinkContainer>
+                <LinkContainer exact to="/school" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">School</NavLink></LinkContainer>
+                <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Achievements</NavLink></LinkContainer>
+                <LinkContainer exact to="/creations" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Creations</NavLink></LinkContainer>
+                <LinkContainer exact to="/about" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">About</NavLink></LinkContainer>
+                <LinkContainer exact to="/contact" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Contact</NavLink></LinkContainer>
+                <p style = {{height: '2px'}}>&nbsp;&nbsp;&nbsp;&nbsp;</p>
                 <LinkContainer to="#">
                   {props.theme === "dark" ?
                     <Toggle

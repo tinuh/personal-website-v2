@@ -4,12 +4,12 @@ import aboutIMG from "./assets/about.png";
 import {Link} from "react-router-dom";
 import Resume from "./assets/Tinu's Professional Resume.pdf";
 
-function About() {
+function About(props) {
   document.title = "About - Tinu Vanapamula";
 
   return (
-    <div className="About">
-      <h1 className="heading">About Me</h1>
+    <div className="content">
+      <h1 className="heading" >About Me</h1>
 
       <div className="about-outer">
         <div className="about-inner">
@@ -30,7 +30,7 @@ function About() {
             Learn more about my achievements and the competitions I participated in <Link className="about-link" to="/competitions-achievements">Here</Link>.
             Additionally, One of my favorite hobbies is Video Production, it involves creativity and is a great way to Express myself.
           </h4>
-        </div>
+        </div><br/><br/>
       </div>
     </div>
   );
