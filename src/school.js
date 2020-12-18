@@ -76,7 +76,7 @@ function School(props) {
                     <h4 className="school-text">I attended <a className="school-link" href="https://www2.montgomeryschoolsmd.org/schools/burtonsvillees/" target="blank">Burtonsville Elementary School</a> from Kindergarten all the way to 3rd grade.</h4>
                 </div>
             </Collapse>
-      </div>
+      </div><br/>
     </div>
   );
 }

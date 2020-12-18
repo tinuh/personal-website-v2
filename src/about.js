@@ -30,7 +30,7 @@ function About(props) {
             Learn more about my achievements and the competitions I participated in <Link className="about-link" to="/competitions-achievements">Here</Link>.
             Additionally, One of my favorite hobbies is Video Production, it involves creativity and is a great way to Express myself.
           </h4>
-        </div><br/><br/>
+        </div>
       </div>
     </div>
   );

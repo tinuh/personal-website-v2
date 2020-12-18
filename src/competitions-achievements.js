@@ -65,7 +65,7 @@ function CompetitionsAchievements(props) {
               </div>
           </Collapse>
 
-      </div>
+      </div><br/>
     </div>
   );
 }
