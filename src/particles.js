@@ -95,7 +95,8 @@ class Canvas extends Component {
                 mode: "grab"
               },
               onclick: {
-                enable: false
+                enable: true,
+                mode: "repulse"
               },
               resize: true
             }

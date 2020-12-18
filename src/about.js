@@ -4,7 +4,7 @@ import aboutIMG from "./assets/about.png";
 import {Link} from "react-router-dom";
 import Resume from "./assets/Tinu's Professional Resume.pdf";
 
-function About(props) {
+function About() {
   document.title = "About - Tinu Vanapamula";
 
   return (
