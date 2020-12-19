@@ -6,15 +6,35 @@ import './App.css';
 //import {Link} from "react-router-dom";
 import aboutIMG from "./assets/backgroundless.png";
 import {Link} from 'react-router-dom';
+import { Wave } from "react-animated-text";
 
 function Home() {
   document.title = "Tinu Vanapamula";
 
   return (
     <div className="content">
-        <div className="about-inner" style = {{textAlign: 'center'}}>
+        <div className="home-img" style = {{textAlign: 'center'}}>
           <Link to = "/about"><img className="about-img"  src={aboutIMG} alt = "About IMG"></img></Link>
         </div>
+
+        <center className = "home-text">
+          <Wave
+            text="Hi, I'm Tinu Vanapamula"
+            effect="verticalFadeIn"
+            effectChange={2.5}
+            effectDirection='up'
+            iterations={1}          />
+        </center>
+
+        <center className = "home-text-sub">
+          <Wave
+            text="Click me to learn more"
+            effect="verticalFadeIn"
+            effectChange={2.5}
+            effectDirection='down'
+            iterations={1}          />
+        </center><br/><br/>
+
         {/* <Message type = "success" message = "Welcome to my Website!" dismiss = "5000" /> */}
 
         {/* <Carousel>

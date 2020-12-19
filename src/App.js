@@ -22,8 +22,9 @@ import {Modal, Button} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
+import Pageclip from 'pageclip';
 import axios from 'axios';
-
+import { Formik } from 'formik';
 
 function App() {
   if (localStorage.getItem("theme") !== "light" && localStorage.getItem("theme") !== "dark"){
@@ -62,17 +63,68 @@ function App() {
   }, []);
 
   //Contact Form Submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const data = new FormData(e.target);
+  async function handleSubmit(values) {
+    const data = values;
+    const headers = {
+      'Access-Control-Allow-Origin': "*"
+    }
+    console.log(data);
 
-    axios.post('https://send.pageclip.co/iBMnJYTO8tl34tNZqdwFebauCzAONJoF/contact', data)
+    /* const pageclipAPIKey = 'api_iBMnJYTO8tl34tNZqdwFebauCzAONJoF';
+    const pageclip = new Pageclip(pageclipAPIKey); */
+    
+
+    /* pageclip.send('contact', data, headers,).then(function (error, response) {
+      console.log('saved?', !!error, '; response:', error || response)
+    }); */
+
+    await axios.post('https://send.pageclip.co/iBMnJYTO8tl34tNZqdwFebauCzAONJoF/contact', data)
       .then(function (response) {
         console.log(response)
+        setContact(false);
+        
+        store.addNotification({
+          title: "Success",
+          message: "Contact Form Submitted",
+          type: "success",
+          insert: "bottom",
+          isMobile: true,
+          container: "bottom-right",
+          animationIn: ["animated", "flipInX"],
+          animationOut: ["animated", "flipOutX"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+            showIcon: true
+          },
+        });
       })
       .catch(function (error) {
         console.log(error)
+        setContact(false);
+        
+        store.addNotification({
+          title: "API Error",
+          message: "Form not submitted",
+          type: "danger",
+          insert: "bottom",
+          isMobile: true,
+          container: "bottom-right",
+          animationIn: ["animated", "flipInX"],
+          animationOut: ["animated", "flipOutX"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+            showIcon: true
+          },
+        });
       })
+
+    /* pageclip.send('contact', data)
+    .then((response) => {
+      console.log(response.status, response.data) // => 200, [Item, Item]
+    }); */
+    
   }
 
   //Particles Style
@@ -125,31 +177,39 @@ function App() {
             centered
           >
             <div style = {theme === "dark" ? {backgroundColor: "#222"} : {backgroundColor: "#ffffff"}}>
-              <form name = "contact" onSubmit = {handleSubmit}>
-                <Modal.Header closeButton>
-                  <Modal.Title id="contained-modal-title-vcenter" style = {theme === "dark" ? {color: "#ffffff"} : {color: "#222"}}>
-                    Contact
-                  </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <div class = "row">
-                    <div class = "col-md-6">
-                      <TextField label = "Full Name" name = "name" type = "text" variant = "outlined" style = {styles.input} required/>
-                    </div><br/><br/><br/>
-                    <div class = "col-md-6">
-                      <TextField label = "Email" name = "email" type = "email" variant = "outlined" style = {styles.input} required/>
-                    </div><br/><br/><br/>
-                    <div class = "col-md-12">
-                      <TextField multiline rowsMax={4} rows= {3} label = "Message" name = "message" type = "text" variant = "outlined" style = {styles.input} required/>
-                    </div>
-                  </div>
-                  
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button type="submit" variant = "outline-success">Submit</Button>
-                  <Button type = "button" onClick={() => setContact(false)} variant = "outline-danger">Cancel</Button>
-                </Modal.Footer>
-              </form>
+              <Formik 
+                initialValues={{name: '', email: '', message: ''}}
+                onSubmit = {(values, {setSubmitting}) => {
+                  handleSubmit(values);
+                }}
+              >
+                {({values, errors, tocuhed, handleChange, handleBlur, handleSubmit, isSubmitting}) => (
+                  <form onSubmit={handleSubmit}>
+                    <Modal.Header closeButton>
+                      <Modal.Title id="contained-modal-title-vcenter" style = {theme === "dark" ? {color: "#ffffff"} : {color: "#222"}}>
+                        Contact
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <div class = "row">
+                        <div class = "col-md-6">
+                          <TextField onChange = {handleChange} value = {values.name} onBlur = {handleBlur} label = "Full Name" name = "name" type = "text" variant = "outlined" style = {styles.input} required/>
+                        </div><br/><br/><br/>
+                        <div class = "col-md-6">
+                          <TextField onChange = {handleChange} value = {values.email} onBlur = {handleBlur} label = "Email" name = "email" type = "email" variant = "outlined" style = {styles.input} required/>
+                        </div><br/><br/><br/>
+                        <div class = "col-md-12">
+                          <TextField onChange = {handleChange} value = {values.message} onBlur = {handleBlur} multiline rowsMax={6} rows= {4} label = "Message" name = "message" type = "text" variant = "outlined" style = {styles.input} required/>
+                        </div>
+                      </div>
+                      
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button type="submit" variant = "outline-success" disabled={isSubmitting}>Submit</Button>
+                      <Button type = "button" onClick={() => setContact(false)} variant = "outline-danger">Cancel</Button>
+                    </Modal.Footer>
+                  </form>)}
+              </Formik>
             </div>
           </Modal>
 

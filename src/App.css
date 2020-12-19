@@ -246,6 +246,18 @@
     display: inline-block;
 }
 
+.home-text {
+    font-size: 3rem;
+}
+
+.home-text-sub{
+    font-size: 2rem;
+}
+
+.home-img{
+    margin-bottom: 50px
+}
+
 @media (max-width: 768px){
     .about-outer {
         margin-bottom:50px;
@@ -263,6 +275,16 @@
     }
     .footer-icons{
         display: block;
+    }
+    .home-text {
+        font-size: 1.5rem;
+    }
+    
+    .home-text-sub{
+        font-size: 1rem;
+    }
+    .home-img{
+        margin-bottom: 20px
     }
 }
 
