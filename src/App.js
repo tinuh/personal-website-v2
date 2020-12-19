@@ -22,7 +22,6 @@ import {Modal, Button} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import Pageclip from 'pageclip';
 import axios from 'axios';
 import { Formik } from 'formik';
 
@@ -65,9 +64,9 @@ function App() {
   //Contact Form Submit
   async function handleSubmit(values) {
     const data = values;
-    const headers = {
-      'Access-Control-Allow-Origin': "*"
-    }
+    //const headers = {
+    //  'Access-Control-Allow-Origin': "*"
+    //}
     console.log(data);
 
     /* const pageclipAPIKey = 'api_iBMnJYTO8tl34tNZqdwFebauCzAONJoF';

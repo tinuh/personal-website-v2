@@ -12,7 +12,6 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.4.1",
     "formik": "^2.2.6",
-    "pageclip": "^1.0.0",
     "react": "^16.13.1",
     "react-animated-text": "^0.1.4",
     "react-bootstrap": "^1.0.1",
