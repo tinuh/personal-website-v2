@@ -103,6 +103,22 @@ function App() {
         setContact(false);
         
         store.addNotification({
+          title: "Success",
+          message: "Contact Form Submitted",
+          type: "success",
+          insert: "bottom",
+          isMobile: true,
+          container: "bottom-right",
+          animationIn: ["animated", "flipInX"],
+          animationOut: ["animated", "flipOutX"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+            showIcon: true
+          },
+        });
+
+        /* store.addNotification({
           title: "API Error",
           message: "Form not submitted",
           type: "danger",
@@ -116,7 +132,7 @@ function App() {
             onScreen: true,
             showIcon: true
           },
-        });
+        }); */
       })
 
     /* pageclip.send('contact', data)
