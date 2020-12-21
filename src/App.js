@@ -67,12 +67,16 @@ function App() {
     /* const headers = {
       'Access-Control-Allow-Origin': "*"
     } */
-    data.ip = await fetch("https://www.cloudflare.com/cdn-cgi/trace")
+    await fetch("https://www.cloudflare.com/cdn-cgi/trace")
       .then(
         res => res.text()
       )
       .then(
-        ip => data.ip = ip.slice(ip.indexOf('ip=')+3,ip.indexOf('ip=')+18).trim()
+        ip => {
+          let start = ip.indexOf('ip=')+3;
+          let end = start+ip.slice(start).indexOf('\n');
+          data.ip = ip.slice(start, end).trim();
+        }
       )
 
     /*   data.ip = await fetch("https://checkip.amazonaws.com/")
