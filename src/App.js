@@ -64,9 +64,9 @@ function App() {
   //Contact Form Submit
   async function handleSubmit(values) {
     const data = values;
-    const headers = {
+    /* const headers = {
       'Access-Control-Allow-Origin': "*"
-    }
+    } */
     data.ip = await fetch("https://www.cloudflare.com/cdn-cgi/trace")
       .then(
         res => res.text()
@@ -102,7 +102,7 @@ function App() {
         
         store.addNotification({
           title: "Success",
-          message: "Contact Form Submitted",
+          message: "Contact Form Submitted.",
           type: "success",
           insert: "bottom",
           isMobile: true,
