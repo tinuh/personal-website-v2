@@ -88,7 +88,7 @@ class Canvas extends Component {
             }
           },
           interactivity: {
-            detect_on: "canvas",
+            detect_on: "window",
             events: {
               onhover: {
                 enable: true,

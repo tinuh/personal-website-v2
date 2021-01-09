@@ -64,10 +64,31 @@ function App() {
   //Contact Form Submit
   async function handleSubmit(values) {
     const data = values;
-    //const headers = {
-    //  'Access-Control-Allow-Origin': "*"
-    //}
-    console.log(data);
+    /* const headers = {
+      'Access-Control-Allow-Origin': "*"
+    } */
+    await fetch("https://www.cloudflare.com/cdn-cgi/trace")
+      .then(
+        res => res.text()
+      )
+      .then(
+        ip => {
+          let start = ip.indexOf('ip=')+3;
+          let end = start+ip.slice(start).indexOf('\n');
+          data.ip = ip.slice(start, end).trim();
+        }
+      )
+
+    /*   data.ip = await fetch("https://checkip.amazonaws.com/")
+      .then(
+        res => res.text()
+      )
+      .then(
+        ip => data.ip = ip
+      )
+ */
+
+    console.log(data)
 
     /* const pageclipAPIKey = 'api_iBMnJYTO8tl34tNZqdwFebauCzAONJoF';
     const pageclip = new Pageclip(pageclipAPIKey); */
@@ -81,10 +102,11 @@ function App() {
       .then(function (response) {
         console.log(response)
         setContact(false);
+        console.log('sub');
         
         store.addNotification({
           title: "Success",
-          message: "Contact Form Submitted",
+          message: "Contact Form Submitted.",
           type: "success",
           insert: "bottom",
           isMobile: true,
@@ -101,6 +123,7 @@ function App() {
       .catch(function (error) {
         console.log(error)
         setContact(false);
+        console.log('fail');
         
         store.addNotification({
           title: "Success",
