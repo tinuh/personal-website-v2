@@ -28,7 +28,7 @@ function Footer(props) {
             <a title="Instagram" href="https://www.instagram.com/tinu.vanapamula" target="blank"><img className="icon" src={instagram} alt = "Instagram" /></a> &nbsp;
           </div>
 
-          <small className={props.theme === "dark" ? "footer-text-light" : "footer-text-dark"}>Copyright &copy; 2020 Tinu Vanapamula</small>
+          <small className={props.theme === "dark" ? "footer-text-light" : "footer-text-dark"}>Copyright &copy; 2021 Tinu Vanapamula</small>
         </div>
       </footer>
     </div>
