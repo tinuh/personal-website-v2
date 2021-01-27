@@ -5,6 +5,7 @@ import NavbarComponent from "./navbar";
 import Home from "./home";
 import Footer from "./footer";
 import HomeworkManager from "./homework-manager";
+import DigitalFit from "./digital-fit";
 import About from "./about";
 import School from "./school";
 import NotFound from "./404";
@@ -265,6 +266,7 @@ function App() {
                     <Route exact path = "/school" render = {() => <School theme = {theme}/>} />
                     <Route exact path = "/competitions-achievements" render = {() => <CompetitionsAchievements theme = {theme}/>} />
                     <Route exact path = "/homework-manager" render = {() => <HomeworkManager theme = {theme} />} />
+                    <Route exact path = "/digital-fit" render = {() => <DigitalFit theme = {theme} />} />
                     <Route exact path = "/creations" render = {() => <Creations theme = {theme} />} />
                     <Route exact path = "/about" render = {() => <About/>} />
                     <Route render={() => <NotFound theme = {theme}/>} />

@@ -40,6 +40,7 @@ function CompetitionsAchievements(props) {
 
             <Collapse in={year2020}>
                 <div>
+                    <h3 className="competition">December - Won the <a className="competition-link" href="https://www.congressionalappchallenge.us/" target="blank">Congressional App Challenge</a> (2nd Time) for Maryland <a className="competition-link" href="https://www.congressionalappchallenge.us/20-MD03" target="blank">District MD-03</a></h3>
                     <h3 className="competition">May - Participated in 2019-2020 <a className="competition-link" target = "blank" href = "https://acsl.org">ACSL</a> Finals Junior Division</h3>
                     <h3 className="competition">March - <a className = "competition-link" href = "https://secwww.jhuapl.edu/stem/mesa/winners/" target = "blank">3rd Place </a> JHU-APL MESA <a className = "competition-link" href = "https://secwww.jhuapl.edu/stem/mesa/school-based-program/competitions" target = "blank">NEDC Engineering Competition</a> (as <a className = "competition-link" href = "https://www.youtube.com/channel/UCO_5muSlEd5sDPZyKTuJbNA/" target = "blank">STEM Thunders</a>) </h3>
                 </div>
