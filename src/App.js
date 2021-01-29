@@ -267,6 +267,7 @@ function App() {
                     <Route exact path = "/competitions-achievements" render = {() => <CompetitionsAchievements theme = {theme}/>} />
                     <Route exact path = "/homework-manager" render = {() => <HomeworkManager theme = {theme} />} />
                     <Route exact path = "/creations" render = {() => <Creations theme = {theme} />} />
+                    <Route exact path = "/skills" render = {() => <Skills theme = {theme} />} />
                     <Route exact path = "/about" render = {() => <About/>} />
                     <Route render={() => <NotFound theme = {theme}/>} />
                   </Switch>
