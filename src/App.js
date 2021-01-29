@@ -7,6 +7,7 @@ import Footer from "./footer";
 import HomeworkManager from "./homework-manager";
 import About from "./about";
 import School from "./school";
+import Skills from "./skills";
 import NotFound from "./404";
 import CompetitionsAchievements from "./competitions-achievements";
 import Creations from "./creations";
