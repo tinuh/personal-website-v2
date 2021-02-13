@@ -34,7 +34,7 @@ function DigitalFit() {
       <div className="homework-div">
         <h3 className="homework-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digital Fit is my
           winning app for the <a className='homework-link' target="blank" href="https://www.congressionalappchallenge.us/">Congressional App Challenge</a> in
-          2019 for <a className="homework-link" target="blank" href="https://www.congressionalappchallenge.us/20-MD03">District MD-03</a>.
+          2020 for <a className="homework-link" target="blank" href="https://www.congressionalappchallenge.us/20-MD03">District MD-03</a>.
           Welcome to Digital Fit. More than ever, we are spending more and more time on our digital devices. This can have many side effects. 
           The first of which is eye strain, it can be quite damaging for your eyes to focus on a bright screen for a long time. 
           Optometrists recommend following the 20-20-20 rule, which is to look away from our screen every 20 minutes, for 20 seconds at something that is 20 feet in the distance. 

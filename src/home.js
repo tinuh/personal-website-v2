@@ -4,7 +4,7 @@ import './App.css';
 //import Picture from "./assets/new_york.jpg"
 //import Message from "./alert";
 //import {Link} from "react-router-dom";
-import aboutIMG from "./assets/backgroundless.png";
+import aboutIMG from "./assets/backgroundless-small.png";
 import {Link} from 'react-router-dom';
 import { Wave } from "react-animated-text";
 
