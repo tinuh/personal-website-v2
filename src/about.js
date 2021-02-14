@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import aboutIMG from "./assets/about.png";
+import aboutIMG from "./assets/about.jpg";
 import {Link} from "react-router-dom";
 import Resume from "./assets/Tinu's Professional Resume.pdf";
 
@@ -18,17 +18,17 @@ function About() {
         <div className="about-body">
           <h4 className="about-text">
             &nbsp;&nbsp;&nbsp; Hi, I'm Tinu Vanapamula!
-            I'm an Freshman at Montgomery Blair High School and I'm very passionate about Computer Science.
-            I have been interested in Computer Science ever since 6th grade.
+            I'm an Freshman at Montgomery Blair High School and I'm quite passionate about Computer Science.&nbsp;
+            Computer Science has been a large part of my life ever since my 6th grade summer.&nbsp;
             {/* Mr. Bhaskar Ganti played a huge role in my computer science career by mentoring me.
-            He is also the CEO of <a target = "blank" href = "http://issi-software.com" className="about-link">International Software Systems Inc</a>. */}
-            I have learned Python, Javascript, and HTML, and a few web development frameworks (Ex. Django, Express, React).
-            I am currently interesting in Web Development, and trying to get into Competitive Programming.
-            So far, in my career, I have won the <a target = "blank" href = "https://www.congressionalappchallenge.us/" className="about-link">Congressional App Challenge</a> in Maryland's District MD-03.
-            You can learn more about that <Link className="about-link" to="/homework-manager">Here</Link>.
-            Additionally, I have participated in an Engineering Challenge at John's Hopkins Applied Physics lab.
-            Learn more about my achievements and the competitions I participated in <Link className="about-link" to="/competitions-achievements">Here</Link>.
-            Additionally, One of my favorite hobbies is Video Production, it involves creativity and is a great way to Express myself.
+            He is also the CEO of <a target = "blank" href = "http://issi-software.com" className="about-link">International Software Systems Inc</a>. */}    
+            I am currently well versed in the world of Web Development, and interested in branching out to other topics in computer science.
+            I have won the <a target = "blank" href = "https://www.congressionalappchallenge.us/" className="about-link">Congressional App Challenge</a> in Maryland's District MD-03 for both the years of 2019 and 2020.
+            You can learn more about my creations <Link className="about-link" to="/creations">Here</Link>.
+            Additionally, I am interested in electornic engineering and have participated in an Engineering Challenge at John's Hopkins Applied Physics lab.
+            Learn more about my achievements and the competitions I've participated in <Link className="about-link" to="/competitions-achievements">Here</Link>.
+            My hobbies include DIY Projects with electronics and the occasional video production.
+            
           </h4>
         </div>
       </div>

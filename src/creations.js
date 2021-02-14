@@ -24,8 +24,9 @@ function Creations(props) {
                   <Card.Body>
                       <center><Card.Title>Digital Fit</Card.Title></center>
                       <Card.Text style = {{fontSize: '16px'}}>
-                        Digital Fit is a web application that reminds anyone who uses their computer to take occasional breaks to prevent eye strain & chronic pain.
-                        It also includes tools that help you to breath and exercise.
+                        Digital Fit is a web app that reminds anyone who uses their computer to take occasional breaks to prevent eye strain & chronic pain.
+                        Featuring tools to help you breath and stay active.
+                        Click <Link className = "index-link" to = "/digital-fit">Here</Link> to read more.
                       </Card.Text>
                       <center><a target = "blank" href = "http://fit.tinu.tech"><Button variant={props.theme === "light" ? "outline-dark" : "outline-light"}>Visit Site</Button></a></center>
                   </Card.Body>
