@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import NavbarComponent from "./navbar";
@@ -80,24 +80,7 @@ function App() {
         }
       )
 
-    /*   data.ip = await fetch("https://checkip.amazonaws.com/")
-      .then(
-        res => res.text()
-      )
-      .then(
-        ip => data.ip = ip
-      )
- */
-
     console.log(data)
-
-    /* const pageclipAPIKey = 'api_iBMnJYTO8tl34tNZqdwFebauCzAONJoF';
-    const pageclip = new Pageclip(pageclipAPIKey); */
-    
-
-    /* pageclip.send('contact', data, headers,).then(function (error, response) {
-      console.log('saved?', !!error, '; response:', error || response)
-    }); */
 
     await axios.post('https://send.pageclip.co/iBMnJYTO8tl34tNZqdwFebauCzAONJoF/contact', data)
       .then(function (response) {
@@ -158,11 +141,6 @@ function App() {
           },
         }); */
       })
-
-    /* pageclip.send('contact', data)
-    .then((response) => {
-      console.log(response.status, response.data) // => 200, [Item, Item]
-    }); */
     
   }
 
