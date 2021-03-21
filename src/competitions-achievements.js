@@ -7,10 +7,11 @@ import {Link} from "react-router-dom";
 import { store } from 'react-notifications-component';
 
 function CompetitionsAchievements(props) {
+  const [year2021, set2021] = useState(false);
   const [year2020, set2020] = useState(false);
   const [year2019, set2019] = useState(false);
   const [year2016, set2016] = useState(false);
-
+  
   React.useEffect(() => {
     document.title = "Competitions & Achievements - Tinu Vanapamula";
     store.addNotification({
@@ -35,6 +36,14 @@ function CompetitionsAchievements(props) {
       <h1 className="heading">Competitions & Achievements</h1>
 
       <div className="competition-div">
+      <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={year2021} onClick={() => set2021(!year2021)}>2021</Link></h2>
+        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+
+            <Collapse in={year2021}>
+                <div>
+                    <h3 className="competition">March - Best <a className="competition-link" target = "blank" href= "https://devpost.com/software/pollster">UI Hack</a> at <a className = "competition-link" target = "blank" href = "https://mocohacks.org">Mocohacks</a> Hackathon</h3>
+                </div>
+            </Collapse><br />
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={year2020} onClick={() => set2020(!year2020)}>2020</Link></h2>
         <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
 

@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 //import { CardDeck } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
+import pollster from "./assets/pollster.png";
 import homework_img from "./assets/homework-manager.jpg";
 import digital_fit from "./assets/digital_fit.png";
 import embeder from "./assets/embeder.jpg";
@@ -20,11 +21,26 @@ function Creations(props) {
 
               <div className = "col-md-4">
                 <Card className = {props.theme === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
+                  <Card.Img variant="top" src={pollster} />
+                  <Card.Body>
+                      <center><Card.Title>Pollster</Card.Title></center>
+                      <Card.Text style = {{fontSize: '16px'}}>
+                        Pollster is a geo-based Community Polling App. It was created by Me, <a className = "index-link" target = "blank" href = "https://linkaiwu.com">Linkai Wu</a>, and <a className = "index-link" target = "blank" href = "https://github.com/AnuragGowda">Anurag Gowda</a>.
+                        Buisness and concerned citizens can lauch polls to see what the community thinks.
+                        Click <Link className = "index-link" to = "/pollster">Here</Link> to read more.
+                      </Card.Text>
+                      <center><a target = "blank" href = "http://www.pollster.ink"><Button variant={props.theme === "light" ? "outline-dark" : "outline-light"}>Visit Site</Button></a></center>
+                  </Card.Body>
+                </Card><br/>
+              </div>
+
+              <div className = "col-md-4">
+                <Card className = {props.theme === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
                   <Card.Img variant="top" src={digital_fit} />
                   <Card.Body>
                       <center><Card.Title>Digital Fit</Card.Title></center>
                       <Card.Text style = {{fontSize: '16px'}}>
-                        Digital Fit is a web app that reminds anyone who uses their computer to take occasional breaks to prevent eye strain & chronic pain.
+                        Digital Fit is a web app that reminds anyone who uses their computer to take breaks to prevent eye strain & chronic pain.
                         Featuring tools to help you breath and stay active.
                         Click <Link className = "index-link" to = "/digital-fit">Here</Link> to read more.
                       </Card.Text>
