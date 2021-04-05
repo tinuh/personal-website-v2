@@ -91,7 +91,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme = {mui_theme}>
-        <ChakraProvider theme = {theme} resetCSS = {false}>
+        <ChakraProvider resetCSS = {false}>
         <div className="App" style = {styles.root}>
             {/* Notification */}
             <ReactNotification />
