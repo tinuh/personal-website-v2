@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { useState } from "react";
 import { Collapse } from "react-bootstrap";
 //import Alert from "./alert"
