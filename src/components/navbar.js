@@ -24,6 +24,7 @@ function NavbarComponent(props) {
                 <LinkContainer exact to="/" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Home</NavLink></LinkContainer>
                 <LinkContainer exact to="/school" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">School</NavLink></LinkContainer>
                 <LinkContainer exact to="/competitions-achievements" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Achievements</NavLink></LinkContainer>
+                <LinkContainer exact to="/skills" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Skills</NavLink></LinkContainer>
                 <LinkContainer exact to="/creations" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Creations</NavLink></LinkContainer>
                 <LinkContainer exact to="/about" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">About</NavLink></LinkContainer>
                 <LinkContainer exact to="#" onClick={() => {setExpanded(false); props.contact(true);}}><NavLink className = "navbar-item">Contact</NavLink></LinkContainer>

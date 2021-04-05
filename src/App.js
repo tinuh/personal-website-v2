@@ -25,6 +25,7 @@ import School from "./pages/school";
 import NotFound from "./pages/404";
 import CompetitionsAchievements from "./pages/competitions-achievements";
 import Creations from "./pages/creations";
+import Skills from "./pages/skills";
 
 function App() {
   if (localStorage.getItem("theme") !== "light" && localStorage.getItem("theme") !== "dark"){
@@ -106,8 +107,6 @@ function App() {
             
             {/* Contact Modal */}
             <Contact contact = {contact} setContact = {setContact} theme = {theme} styles = {styles} />
-            
-
 
             {/* react-router main content */}
             <div className = "actual-content">
@@ -123,6 +122,7 @@ function App() {
                       <Route exact path = "/competitions-achievements" render = {() => <CompetitionsAchievements theme = {theme}/>} />
                       <Route exact path = "/homework-manager" render = {() => <HomeworkManager theme = {theme} />} />
                       <Route exact path = "/digital-fit" render = {() => <DigitalFit theme = {theme} />} />
+                      <Route exact path = "/skills" render = {() => <Skills theme = {theme} />} />
                       <Route exact path = "/creations" render = {() => <Creations theme = {theme} />} />
                       <Route exact path = "/about" render = {() => <About/>} />
                       <Route render={() => <NotFound theme = {theme}/>} />
@@ -134,8 +134,8 @@ function App() {
 
             {/* Footer Component */}
             <Footer theme = {theme}/>
-          </div>
-      
+                
+        </div>
       </ChakraProvider>
      </ThemeProvider>
     </Router>
