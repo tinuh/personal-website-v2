@@ -1,30 +1,32 @@
-import React from 'react'
-import './App.css';
+import React, { useState } from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import NavbarComponent from "./navbar";
-import Home from "./home";
-import Footer from "./footer";
-import HomeworkManager from "./homework-manager";
-import DigitalFit from "./digital-fit";
-import About from "./about";
-import School from "./school";
-import NotFound from "./404";
-import CompetitionsAchievements from "./competitions-achievements";
-import Creations from "./creations";
-import { useState } from 'react';
 import 'react-notifications-component/dist/theme.css';
 import ReactNotification from 'react-notifications-component';
 import { store } from 'react-notifications-component';
 import 'animate.css/animate.compat.css'
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
-//import Particles from 'react-particles-js';
-import Particles from "./particles";
+import Particles from "./components/particles";
 import {Modal, Button} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import axios from 'axios';
 import { Formik } from 'formik';
+import './style/style.css';
+
+//Component Imports
+import NavbarComponent from "./components/navbar";
+import Footer from "./components/footer";
+
+//Page imports
+import Home from "./pages/home";
+import HomeworkManager from "./pages/homework-manager";
+import DigitalFit from "./pages/digital-fit";
+import About from "./pages/about";
+import School from "./pages/school";
+import NotFound from "./pages/404";
+import CompetitionsAchievements from "./pages/competitions-achievements";
+import Creations from "./pages/creations";
 
 function App() {
   if (localStorage.getItem("theme") !== "light" && localStorage.getItem("theme") !== "dark"){

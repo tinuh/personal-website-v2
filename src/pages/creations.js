@@ -3,11 +3,11 @@ import { Card } from "react-bootstrap";
 //import { CardDeck } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import pollster from "./assets/pollster.png";
-import homework_img from "./assets/homework-manager.jpg";
-import digital_fit from "./assets/digital_fit.png";
-import embeder from "./assets/embeder.jpg";
-import reflex from "./assets/reflex.jpg";
+import pollster from ".././assets/pollster.png";
+import homework_img from ".././assets/homework-manager.jpg";
+import digital_fit from ".././assets/digital_fit.png";
+import embeder from ".././assets/embeder.jpg";
+import reflex from ".././assets/reflex.jpg";
 
 function Creations(props) {
   document.title = "Creations - Tinu Vanapamula";
