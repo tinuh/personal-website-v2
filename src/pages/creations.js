@@ -27,7 +27,7 @@ function Creations() {
                       {ReactHtmlParser(description)}
 
                       {readMorePage && (<> 
-                          &nbsp;Click <Link className = "index-link" to = {readMorePage}>Here</Link> to read more.
+                          &nbsp;Click <Link className = "index-link" to = {"/articles/" + readMorePage}>Here</Link> to read more.
                       </>)}
                       
                     </Card.Text>

@@ -3,7 +3,7 @@ module.exports = [
       "name": "Pollster",
       "description": "Pollster is a geo-based Community Polling App. It was created by Me, <a class = 'index-link' target = 'blank' href = 'https://linkaiwu.com'>Linkai Wu</a>, and <a class = 'index-link' target = 'blank' href = 'https://github.com/AnuragGowda'>Anurag Gowda</a>. Buisness and concerned citizens can lauch polls to see what the community thinks.",
       "url": "https://pollster.ink",
-      "readMorePage": "/pollster",
+      "readMorePage": "pollster",
       "img": require("../assets/pollster.png"),
       "github": "https://github.com/tinuh/pollster"
     },
@@ -11,16 +11,16 @@ module.exports = [
       "name": "Digital Fit",
       "description": "Digital Fit is a web app that reminds anyone who uses their computer to take breaks to prevent eye strain & chronic pain. Featuring tools to help you breath and stay active.",
       "url": "https://fit.tinu.tech",
-      "readMorePage": "/digital-fit",
-      "img": require("../assets/digital_fit.png"),
+      "readMorePage": "digital-fit",
+      "img": require("../assets/digitalFit.png"),
       "github": "https://github.com/tinuh/online-time"
     },
     {
       "name": "Homework Manager",
       "description": "This Is The Homework Manager. A New Type Of Tool For Classrooms. It Helps Classrooms Keep Track Of All Types Of Things Including Homework And Announcements.",
       "url": "https://homework.tinu.tech",
-      "readMorePage": "/homework-manager",
-      "img": require("../assets/homework-manager.jpg"),
+      "readMorePage": "homework-manager",
+      "img": require("../assets/homeworkManager.jpg"),
       "github": "https://github.com/tinuh/Homework-Manager"
     },
     {

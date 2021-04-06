@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
 
-
 class Canvas extends Component {
   state = { width: "0px", height: "0px" };
   componentDidMount() {
@@ -18,8 +17,6 @@ class Canvas extends Component {
     });
   };
   render() {
-    const { width, height } = this.state;
-    console.log(width, height);
     return (
       <Particles
         {...this.state}

@@ -1,16 +1,19 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {Collapse} from "react-bootstrap";
-//import Alert from "./alert";
 import { useState } from 'react';
+import {useColorMode} from '@chakra-ui/react';
 import { store } from 'react-notifications-component';
 
-function School(props) {
+function School() {
+  document.title = "School - Tinu Vanapamula";
+
   const [blair, setBlair] = useState(false);
   const [tpms, setTpms] = useState(false);
   const [drew, setDrew] = useState(false);
   const [bes, setBes] = useState(false);
-  document.title = "School - Tinu Vanapamula";
+  const { colorMode } = useColorMode();
+  
 
   React.useEffect(() => {
     store.addNotification({
@@ -38,7 +41,7 @@ function School(props) {
       <div className="school-div">
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={blair} onClick={() => setBlair(!blair)}>Montgomery Blair High School</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={blair}>
                 <div>
@@ -48,7 +51,7 @@ function School(props) {
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={tpms} onClick={() => setTpms(!tpms)}>Takoma Park Middle School</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={tpms}>
                 <div>
@@ -58,7 +61,7 @@ function School(props) {
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={drew} onClick={() => setDrew(!drew)}>Dr. Charles R. Drew Elementary School</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={drew}>
                 <div>
@@ -68,7 +71,7 @@ function School(props) {
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
         aria-expanded={bes} onClick={() => setBes(!bes)}>Burtonsville Elementary School</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"}/>
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"}/>
 
             <Collapse in={bes}>
                 <div>

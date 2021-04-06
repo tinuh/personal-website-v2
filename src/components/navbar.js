@@ -16,7 +16,7 @@ function NavbarComponent(props) {
 
   return (
     <div className="Navbar">
-      <Navbar expanded={expanded} fixed = "top" bg={props.theme} expand="lg" className = {props.theme === "dark" ? "navbar-light portfolio-navbar" : "navbar-dark portfolio-navbar"} style={{background: 'linear-gradient(90deg, var(--light), 0%, var(--cyan) 0%, var(--danger) 100%), var(--blue)'}}>
+      <Navbar expanded={expanded} fixed = "top" bg={colorMode} expand="lg" className = {colorMode === "dark" ? "navbar-light portfolio-navbar" : "navbar-dark portfolio-navbar"} style={{background: 'linear-gradient(90deg, var(--light), 0%, var(--cyan) 0%, var(--danger) 100%), var(--blue)'}}>
         <LinkContainer exact to = "/">
             <Navbar.Brand>Tinu Vanapamula</Navbar.Brand>
         </LinkContainer>

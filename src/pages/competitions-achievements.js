@@ -1,15 +1,16 @@
 import React from 'react';
 import { useState } from "react";
 import { Collapse } from "react-bootstrap";
-//import Alert from "./alert"
 import {Link} from "react-router-dom";
+import {useColorMode} from '@chakra-ui/react'
 import { store } from 'react-notifications-component';
 
-function CompetitionsAchievements(props) {
+function CompetitionsAchievements() {
   const [year2021, set2021] = useState(false);
   const [year2020, set2020] = useState(false);
   const [year2019, set2019] = useState(false);
   const [year2016, set2016] = useState(false);
+  const {colorMode} = useColorMode();
   
   React.useEffect(() => {
     document.title = "Competitions & Achievements - Tinu Vanapamula";
@@ -36,7 +37,7 @@ function CompetitionsAchievements(props) {
 
       <div className="competition-div">
       <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={year2021} onClick={() => set2021(!year2021)}>2021</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={year2021}>
                 <div>
@@ -44,7 +45,7 @@ function CompetitionsAchievements(props) {
                 </div>
             </Collapse><br />
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={year2020} onClick={() => set2020(!year2020)}>2020</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={year2020}>
                 <div>
@@ -55,7 +56,7 @@ function CompetitionsAchievements(props) {
             </Collapse><br />
 
         <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={year2019} onClick={() => set2019(!year2019)}>2019</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"} />
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
           <Collapse in = {year2019} id = "2019">
               <div>
@@ -66,7 +67,7 @@ function CompetitionsAchievements(props) {
           </Collapse><br/>
 
         <h2 className="sub-heading"><Link to="#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={year2016} onClick={() => set2016(!year2016)}>2016</Link></h2>
-        <hr color = {props.theme === "dark" ? "#ffffff" : "#000000"}/>
+        <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"}/>
 
           <Collapse in={year2016}>
               <div>
