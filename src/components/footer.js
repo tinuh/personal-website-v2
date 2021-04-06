@@ -1,11 +1,11 @@
 import React from 'react';
-import instagram from ".././assets/instagram.png";
-import github_dark from ".././assets/github.png";
-import github_light from ".././assets/github-light.png";
-import youtube from ".././assets/youtube.png";
-import linkedin from ".././assets/linkedln.png";
-import document from ".././assets/document.svg";
-import Resume from ".././assets/Tinu's Professional Resume.pdf";
+import instagram from "../assets/instagram.png";
+import github_dark from "../assets/github.png";
+import github_light from "../assets/github-light.png";
+import youtube from "../assets/youtube.png";
+import linkedin from "../assets/linkedln.png";
+import document from "../assets/document.svg";
+import Resume from "../assets/Tinu's Professional Resume.pdf";
 
 function Footer(props) {
   return (

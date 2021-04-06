@@ -8,9 +8,11 @@ import "react-toggle/style.css";
 import Toggle from 'react-toggle';
 import dark from '.././assets/dark.png';
 import light from '.././assets/light.png';
+import {useColorMode} from '@chakra-ui/react';
 
 function NavbarComponent(props) {
   const [expanded, setExpanded] = useState(false);
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <div className="Navbar">
@@ -30,15 +32,15 @@ function NavbarComponent(props) {
                 <LinkContainer exact to="#" onClick={() => {setExpanded(false); props.contact(true);}}><NavLink className = "navbar-item">Contact</NavLink></LinkContainer>
                 <p style = {{height: '2px'}}>&nbsp;&nbsp;&nbsp;&nbsp;</p>
                 <LinkContainer to="#">
-                  {props.theme === "dark" ?
+                  {colorMode === "dark" ?
                     <Toggle
-                            onChange={() => props.toggle()}
+                            onChange={toggleColorMode}
                             checked={true}
                             icons={{checked: <img alt = "dark" className='themeicon' src={dark} />, unchecked: <img alt = "light" className='themeicon' src={light} />}}
                     />
                     :
                     <Toggle
-                            onChange={() => props.toggle()}
+                            onChange={toggleColorMode}
                             checked={false}
                             icons={{checked: <img alt = "dark"  className='themeicon' src={dark} />, unchecked: <img alt = "light" className='themeicon' src={light} />}}
                     />

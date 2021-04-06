@@ -8,7 +8,7 @@ import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import Particles from "./components/particles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import { ChakraProvider } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 import './style/style.css';
 
 //Component Imports
@@ -28,22 +28,8 @@ import Creations from "./pages/creations";
 import Skills from "./pages/skills";
 
 function App() {
-  if (localStorage.getItem("theme") !== "light" && localStorage.getItem("theme") !== "dark"){
-    localStorage.setItem("theme", 'dark');
-  }
-  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+  const theme = useColorModeValue("light", "dark");
   const [contact, setContact] = useState(false);
-
-  function toggle() {
-    if (theme==="dark") {
-      setTheme("light");
-      localStorage.setItem("theme", 'light');
-    }
-    else {
-        setTheme('dark');
-        localStorage.setItem("theme", 'dark');
-    }
-  }
 
   React.useEffect(() => {
     store.addNotification({
@@ -92,7 +78,6 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme = {mui_theme}>
-        <ChakraProvider resetCSS = {false}>
         <div className="App" style = {styles.root}>
             {/* Notification */}
             <ReactNotification />
@@ -103,7 +88,7 @@ function App() {
             </div>
             
             {/* Navbar Component */}
-            <NavbarComponent theme = {theme} contact = {setContact} toggle = {toggle}/>
+            <NavbarComponent theme = {theme} contact = {setContact}/>
             
             {/* Contact Modal */}
             <Contact contact = {contact} setContact = {setContact} theme = {theme} styles = {styles} />
@@ -123,9 +108,9 @@ function App() {
                       <Route exact path = "/homework-manager" render = {() => <HomeworkManager theme = {theme} />} />
                       <Route exact path = "/digital-fit" render = {() => <DigitalFit theme = {theme} />} />
                       <Route exact path = "/skills" render = {() => <Skills theme = {theme} />} />
-                      <Route exact path = "/creations" render = {() => <Creations theme = {theme} />} />
-                      <Route exact path = "/about" render = {() => <About/>} />
-                      <Route render={() => <NotFound theme = {theme}/>} />
+                      <Route exact path = "/creations" component={Creations} />
+                      <Route exact path = "/about" component={About} />
+                      <Route component={NotFound} />
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>
@@ -136,7 +121,6 @@ function App() {
             <Footer theme = {theme}/>
                 
         </div>
-      </ChakraProvider>
      </ThemeProvider>
     </Router>
   );
