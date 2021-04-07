@@ -28,14 +28,14 @@ module.exports = [
       "description": "The Youtube Embeder is a tool for in-school use. It takes the input of a youtube link and opens a tab with an embeded version. This allows students at school to view academically relevant videos.",
       "url": "https://embed.tinu.tech",
       "img": require("../assets/embeder.jpg"),
-      "github": "https://github.com/tinuh/pollster"
+      "github": "https://github.com/tinuh/Youtube-Embeder"
     },
     {
       "name": "Reflex Game",
       "description": "This Reflex Game requires thinking and is designed to test both your reflex and ability to predict. The challenge is get the pebble in the center of the bar with a dynamic boost after you click on stop.",
       "url": "https://reflex.tinu.tech",
       "img": require("../assets/embeder.jpg"),
-      "github": "https://github.com/tinuh/pollster",
+      "github": "https://github.com/tinuh/Reflex-Game",
       "buttonOveride": "Play Game"
     },
   ]

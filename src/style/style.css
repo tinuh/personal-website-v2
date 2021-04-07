@@ -347,3 +347,7 @@ a {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+.nav-link{
+    font-weight:700
+}

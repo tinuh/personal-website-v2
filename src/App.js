@@ -9,6 +9,7 @@ import Particles from "./components/particles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { useColorModeValue } from "@chakra-ui/react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/style.css';
 
 //Component Imports
