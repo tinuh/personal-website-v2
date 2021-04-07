@@ -7,7 +7,7 @@ import React from 'react';
 //import embeder from "./assets/embeder.jpg";
 //import reflex from "./assets/reflex.jpg";
 
-function Skills(props) {
+function Skills() {
   document.title = "Skills - Tinu Vanapamula";
 
   return (

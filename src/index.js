@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 //import './style/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {ChakraProvider} from "@chakra-ui/react";
+import theme from "./lib/theme";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme = {theme} resetCSS = {true}>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
