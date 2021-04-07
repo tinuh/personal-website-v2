@@ -3,9 +3,8 @@ import { Card } from "react-bootstrap";
 //import { CardDeck } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {useColorMode} from '@chakra-ui/react';
+import { useColorMode, Heading } from '@chakra-ui/react';
 import ReactHtmlParser from 'react-html-parser';
-import { Heading } from '@chakra-ui/react';
 
 function Creations() {
   document.title = "Creations - Tinu Vanapamula";
@@ -48,7 +47,7 @@ function Creations() {
                       </>)}
                       
                     </Card.Text>
-                    <center><a target = "blank" href = {fields.URL}><Button variant={colorMode === "light" ? "outline-dark" : "outline-light"}>{fields["Button Overide"] ? fields["Button Overide"] : "Visit Site"}</Button></a></center>
+                    <center><a target = "blank" href = {fields.URL}><Button className = "creation-button" variant={colorMode === "light" ? "outline-dark" : "outline-light"}>{fields["Button Overide"] ? fields["Button Overide"] : "Visit Site"}</Button></a></center>
                 </Card.Body>
               </Card><br/>
             </div>

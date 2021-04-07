@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import {Collapse} from "react-bootstrap";
-import { useState } from 'react';
-import {useColorMode} from '@chakra-ui/react';
 import { store } from 'react-notifications-component';
-import { Heading } from '@chakra-ui/react';
+import { useColorMode, Heading, Text } from '@chakra-ui/react';
 
 function School() {
   document.title = "School - Tinu Vanapamula";
@@ -45,7 +43,7 @@ function School() {
 
             <Collapse in={blair}>
                 <div>
-                    <h4 className="school-text">I am a Freshman at <a className="school-link" href="https://mbhs.edu/" target="blank">Montgomery Blair High School</a> for the 2020-2021 school year. I am attending the Magnet Math, Science, and Computer Science Program. </h4>
+                  <Text className='school-text' fontSize = "24px">I am a Freshman at <a className="school-link" href="https://mbhs.edu/" target="blank">Montgomery Blair High School</a> for the 2020-2021 school year. I am attending the Magnet Math, Science, and Computer Science Program. </Text>
                 </div>
             </Collapse><br />
 
@@ -54,7 +52,7 @@ function School() {
 
             <Collapse in={tpms}>
                 <div>
-                    <h4 className="school-text">I attended <a className="school-link" href="https://www.montgomeryschoolsmd.org/schools/takomaparkms/" target="blank">Takoma Park Middle School</a> from 2016 - 2020 for the Magnet Math, Science, and Computer Science Program.</h4>
+                    <Text fontSize = "24px" className="school-text">I attended <a className="school-link" href="https://www.montgomeryschoolsmd.org/schools/takomaparkms/" target="blank">Takoma Park Middle School</a> from 2016 - 2020 for the Magnet Math, Science, and Computer Science Program.</Text>
                 </div>
             </Collapse><br />
 
@@ -63,7 +61,7 @@ function School() {
 
             <Collapse in={drew}>
                 <div>
-                    <h4 className="school-text">I attended the Gifted and Talented Program at <a className="school-link" href="https://www2.montgomeryschoolsmd.org/schools/drewes/" target="blank">Dr. Charles R. Drew Elementary School</a> throughout my 4th and 5th grade years, from 2015 through 2017.</h4>
+                    <Text fontSize = "24px" className="school-text">I attended the Gifted and Talented Program at <a className="school-link" href="https://www2.montgomeryschoolsmd.org/schools/drewes/" target="blank">Dr. Charles R. Drew Elementary School</a> throughout my 4th and 5th grade years, from 2015 through 2017.</Text>
                 </div>
             </Collapse><br />
 
@@ -72,7 +70,7 @@ function School() {
 
             <Collapse in={bes}>
                 <div>
-                    <h4 className="school-text">I attended <a className="school-link" href="https://www2.montgomeryschoolsmd.org/schools/burtonsvillees/" target="blank">Burtonsville Elementary School</a> from Kindergarten all the way to 3rd grade.</h4>
+                    <Text fontSize = "24px" className="school-text">I attended <a className="school-link" href="https://www2.montgomeryschoolsmd.org/schools/burtonsvillees/" target="blank">Burtonsville Elementary School</a> from Kindergarten all the way to 3rd grade.</Text>
                 </div>
             </Collapse>
       </div><br/>
