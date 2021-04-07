@@ -2,7 +2,6 @@ import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import { Formik } from 'formik';
-import axios from 'axios';
 import publicIp from 'public-ip';
 import { store } from 'react-notifications-component';
 
