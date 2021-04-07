@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {useColorMode} from '@chakra-ui/react';
 import ReactHtmlParser from 'react-html-parser';
+import { Heading } from '@chakra-ui/react';
 
 function Creations() {
   document.title = "Creations - Tinu Vanapamula";
@@ -23,13 +24,13 @@ function Creations() {
         console.log(records);
         console.log("Fetched Data")
       });
-      
+
       // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [] );
 
   return (!loading ? (
     <div className="content">
-      <h1 className="heading">My Creations</h1>
+      <Heading textAlign = "center" as="h1">My Creations</Heading>
 
       <div className = "creations-div">
           <div className="row">
@@ -58,7 +59,7 @@ function Creations() {
   ) : 
   (
     <div className="content" >
-      <h1 className="heading">Loading...</h1>
+      <Heading textAlign = "center" as="h1">Loading...</Heading>
     </div>
   ));
 }

@@ -2,15 +2,16 @@ import React from 'react';
 import aboutIMG from ".././assets/backgroundless-small.png";
 import {Link} from 'react-router-dom';
 import { Wave } from "react-animated-text";
+import { Box } from "@chakra-ui/react"
 
 function Home() {
   document.title = "Tinu Vanapamula";
 
   return (
     <div className="content">
-        <div className="home-img" style = {{textAlign: 'center'}}>
-          <Link to = "/about"><img className="about-img"  src={aboutIMG} alt = "About IMG"></img></Link>
-        </div>
+        <Box className="home-img">
+          <center><Link to = "/about"><img className="about-img" src={aboutIMG} alt = "About IMG"></img></Link></center>
+        </Box>
 
         <center className = "home-text">
           <Wave

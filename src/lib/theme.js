@@ -31,8 +31,8 @@ const colors = {
 };
 
 const fonts = {
-  body: "Catamaran, system-ui, sans-serif",
-  heading: "Catamaran, system-ui, sans-serif",
+  body: "Manrope, system-ui, sans-serif",
+  heading: "Manrope, system-ui, sans-serif",
   mono: "Menlo, monospace",
 };
 

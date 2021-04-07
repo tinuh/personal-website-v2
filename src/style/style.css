@@ -150,6 +150,7 @@ a {
 }
 
 .homework-div{
+    margin-top: 20px;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -191,6 +192,7 @@ a {
 .icon{
     width: 25px;
     height: 25px;
+    display: inline-block;
 }
 
 .index-link{
@@ -278,7 +280,8 @@ a {
 }
 
 .home-img{
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 @media (max-width: 768px){
@@ -307,6 +310,7 @@ a {
         font-size: 1rem;
     }
     .home-img{
+        text-align: center;
         margin-bottom: 20px
     }
 }
@@ -350,4 +354,12 @@ a {
 
 .nav-link{
     font-weight:700
+}
+
+.homework-text{
+    font-size: 20px;
+}
+
+.sub-heading{
+    margin-bottom: 10px;
 }

@@ -4,6 +4,7 @@ import {Collapse} from "react-bootstrap";
 import { useState } from 'react';
 import {useColorMode} from '@chakra-ui/react';
 import { store } from 'react-notifications-component';
+import { Heading } from '@chakra-ui/react';
 
 function School() {
   document.title = "School - Tinu Vanapamula";
@@ -36,11 +37,10 @@ function School() {
   return (
     <div className="content">
       {/* <Alert message = "Click on the School to see more" type = "primary" dismiss = "5000" hint/> */}
-      <h1 className="heading">School</h1>
+      <Heading textAlign = "center" as="h1">School</Heading>
 
       <div className="school-div">
-        <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
-        aria-expanded={blair} onClick={() => setBlair(!blair)}>Montgomery Blair High School</Link></h2>
+      <Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={blair} onClick={() => setBlair(!blair)}><Heading className = "sub-heading" fontSize = "30px" as="h2">Montgomery Blair High School</Heading></Link>
         <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={blair}>
@@ -49,8 +49,7 @@ function School() {
                 </div>
             </Collapse><br />
 
-        <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
-        aria-expanded={tpms} onClick={() => setTpms(!tpms)}>Takoma Park Middle School</Link></h2>
+        <Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={tpms} onClick={() => setTpms(!tpms)}><Heading className = "sub-heading" fontSize = "30px" as="h2">Takoma Park Middle School</Heading></Link>
         <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={tpms}>
@@ -59,8 +58,7 @@ function School() {
                 </div>
             </Collapse><br />
 
-        <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
-        aria-expanded={drew} onClick={() => setDrew(!drew)}>Dr. Charles R. Drew Elementary School</Link></h2>
+        <Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={drew} onClick={() => setDrew(!drew)}><Heading className = "sub-heading" fontSize = "30px" as="h2">Dr. Charles R. Drew Elementary School</Heading></Link>
         <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"} />
 
             <Collapse in={drew}>
@@ -69,8 +67,7 @@ function School() {
                 </div>
             </Collapse><br />
 
-        <h2 className="sub-heading"><Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text"
-        aria-expanded={bes} onClick={() => setBes(!bes)}>Burtonsville Elementary School</Link></h2>
+        <Link to = "#" className="toggle-collapse" aria-controls="example-collapse-text" aria-expanded={bes} onClick={() => setBes(!bes)}><Heading className = "sub-heading" fontSize = "30px" as="h2">Burtonsville Elementary School</Heading></Link>
         <hr color = {colorMode === "dark" ? "#ffffff" : "#000000"}/>
 
             <Collapse in={bes}>
