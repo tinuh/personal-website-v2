@@ -9,7 +9,7 @@ export default function Contact(props) {
   const webhook = require("webhook-discord");
   const Airtable = require("airtable");
 
-  const Hook = new webhook.Webhook("https://discord.com/api/webhooks/829399481656672266/5XI1_zaJvlNQK8noND26s_TN-LL5B1Ln4pJGfGWHBpep5vQOlCvH7H3W410PZ9G7c4Dx");
+  const Hook = new webhook.Webhook(process.env.REACT_APP_DISCORD_WEBHOOK_URI);
 
   const handleSubmit = async(data) => {
     data.ip = await publicIp.v4({
