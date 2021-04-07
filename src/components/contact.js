@@ -6,8 +6,10 @@ import publicIp from 'public-ip';
 import { store } from 'react-notifications-component';
 
 export default function Contact(props) {
-
+  const webhook = require("webhook-discord");
   const Airtable = require("airtable");
+
+  const Hook = new webhook.Webhook("https://discord.com/api/webhooks/829399481656672266/5XI1_zaJvlNQK8noND26s_TN-LL5B1Ln4pJGfGWHBpep5vQOlCvH7H3W410PZ9G7c4Dx");
 
   const handleSubmit = async(data) => {
     data.ip = await publicIp.v4({
@@ -52,7 +54,20 @@ export default function Contact(props) {
         return;
       }
       records.forEach(async function (record) {
-        //let id = record.getId();
+        let id = await record.getId();
+
+        let msg = await new webhook.MessageBuilder()
+        .setName(data.name)
+        .setColor("#158574")
+        .setTitle(`Contact Submission By ${data.name}`)
+        .setURL(`https://airtable.com/tblxKpYsvjPeDAQQb/viwxKNTUhWNTlgQwt/${id}?blocks=hide`)
+        .addField('Email', data.email)
+        .addField('Message', data.message)
+        .addField('IP', `||${data.ip}||`)
+    
+        if (data.other) await msg.addField('Message', data.message);
+
+        await Hook.send(msg);
 
         await store.addNotification({
           title: "Success",
