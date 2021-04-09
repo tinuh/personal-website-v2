@@ -1,9 +1,25 @@
 import React from 'react';
-import {Modal, Button} from 'react-bootstrap';
-import TextField from '@material-ui/core/TextField';
-import { Formik } from 'formik';
+//import {Modal, Button as BButton} from 'react-bootstrap';
+//import TextField from '@material-ui/core/TextField';
+import { Formik, Form } from 'formik';
 import publicIp from 'public-ip';
 import { store } from 'react-notifications-component';
+
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  Modal as CModal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  Button,
+  Textarea,
+  } from '@chakra-ui/react';
 
 export default function Contact(props) {
   const webhook = require("webhook-discord");
@@ -93,7 +109,62 @@ export default function Contact(props) {
 
     return (
         <div>
-            <Modal
+      <CModal isOpen={props.contact} onClose={() => props.setContact(false)}>
+      <ModalOverlay />   
+        <ModalContent>
+        <ModalHeader>
+          Contact
+        </ModalHeader>
+        <ModalCloseButton />
+
+        <Formik 
+          initialValues={{name: '', email: '', message: ''}}
+          onSubmit={(values, {setSubmitting}) => {
+            handleSubmit(values);
+          }}
+        >
+        {({values, errors, tocuhed, form, handleChange, handleBlur, handleSubmit, isSubmitting}) => (
+        <Form onSubmit={handleSubmit}>
+          <ModalBody>
+            
+            <FormControl>
+              <Box mb={4}>
+                <FormLabel>Full name</FormLabel>
+                <Input onChange={handleChange} value={values.name} type="text" name="name" placeholder="Full name" autoComplete="off" isRequired/>
+              </Box>
+              <Box mb={4}>
+                <FormLabel>Email</FormLabel>
+                <Input onChange={handleChange} value={values.email} type="email" name="email" placeholder="Email" autoComplete="off" isRequired/>
+              </Box>
+
+              <Box mb={4}>
+                <FormLabel>Message</FormLabel>
+                <Textarea
+                  value={values.message}
+                  name="message"
+                  onChange={handleChange}
+                  placeholder="Message"
+                  autoComplete="off"
+                />
+              </Box>
+            </FormControl>
+            
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} type="submit" disabled={isSubmitting}>
+              Submit
+            </Button>
+            <Button colorScheme="red" type="submit" onClick={() => props.setContact(false)} disabled={isSubmitting}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </Form>)}
+        </Formik>
+
+      </ModalContent>
+    </CModal>
+          {/*  <Modal
             show = {props.contact}
             onHide = {() => props.setContact(false)}
             size="md"
@@ -129,13 +200,13 @@ export default function Contact(props) {
                       
                     </Modal.Body>
                     <Modal.Footer>
-                      <Button type="submit" variant = "outline-success" disabled={isSubmitting}>Submit</Button>
-                      <Button type = "button" onClick={() => props.setContact(false)} variant = "outline-danger">Cancel</Button>
+                      <BButton type="submit" variant = "outline-success" disabled={isSubmitting}>Submit</BButton>
+                      <BButton type = "button" onClick={() => props.setContact(false)} variant = "outline-danger">Cancel</BButton>
                     </Modal.Footer>
                   </form>)}
               </Formik>
             </div>
-          </Modal>
+                </Modal> */}
         </div>
     )
 }
