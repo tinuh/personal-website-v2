@@ -1,9 +1,7 @@
 import React from 'react';
 import { Card } from "react-bootstrap";
-//import { CardDeck } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import { useColorMode, Heading } from '@chakra-ui/react';
+import { useColorMode, Heading, Button } from '@chakra-ui/react';
 import ReactHtmlParser from 'react-html-parser';
 
 function Creations() {
@@ -13,7 +11,7 @@ function Creations() {
   const api = process.env.REACT_APP_AIRTABLE_API_KEY;
   let base = new Airtable({apiKey: api}).base('appj7u8nrwKWHIEdc');
   const [loading, setLoading] = React.useState(true);
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState<any>([]);
 
   React.useEffect(() => {
 
@@ -38,7 +36,7 @@ function Creations() {
               <Card className = {colorMode === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
                 <Card.Img variant="top" src={fields.Image && fields.Image[0].url}/>
                 <Card.Body>
-                    <center><Card.Title>{fields.Name}</Card.Title></center>
+                    <div style = {{textAlign: "center"}}><Card.Title>{fields.Name}</Card.Title></div>
                     <Card.Text style = {{fontSize: '16px'}}>
                       {ReactHtmlParser(fields.Description)}
 
@@ -47,7 +45,7 @@ function Creations() {
                       </>)}
                       
                     </Card.Text>
-                    <center><a target = "blank" href = {fields.URL}><Button className = "creation-button" variant={colorMode === "light" ? "outline-dark" : "outline-light"}>{fields["Button Overide"] ? fields["Button Overide"] : "Visit Site"}</Button></a></center>
+                    <div style = {{textAlign: "center"}}><a target = "blank" style = {{textDecoration: "none"}} href = {fields.URL}><Button className = "creation-button" variant="outline">{fields["Button Overide"] ? fields["Button Overide"] : "Visit Site"}</Button></a></div>
                 </Card.Body>
               </Card><br/>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import aboutIMG from ".././assets/about.jpg";
 import {Link} from "react-router-dom";
-import Resume from ".././assets/Tinu's Professional Resume.pdf";
+import Resume from "../assets/Tinu's Professional Resume.pdf";
 import { Heading, Text } from '@chakra-ui/react';
 
 

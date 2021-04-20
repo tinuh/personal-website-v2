@@ -244,11 +244,6 @@ a {
         transform: scale(1.05, 1.05);
         transition: 0.3s;
     }
-
-    .icon:hover {
-        transform: scale(1.1, 1.1);
-        transition: 0.3s;
-    }
 }
 
 .footer-text-dark{
@@ -269,10 +264,12 @@ a {
 }
 
 .home-text {
+    text-align: center;
     font-size: 3rem;
 }
 
 .home-text-sub{
+    text-align: center;
     font-size: 2rem;
 }
 
@@ -301,6 +298,9 @@ a {
     }
     .home-text {
         font-size: 1.5rem;
+    }
+    .centerer{
+        margin-bottom: 5px;
     }
     
     .home-text-sub{
@@ -371,4 +371,17 @@ a {
 
 .creation-button{
     margin-top: 15px;
+}
+
+.centered
+{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }

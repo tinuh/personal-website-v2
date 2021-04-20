@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
 
-class Canvas extends Component {
+class Canvas extends Component<any> {
   state = { width: "0px", height: "0px" };
   componentDidMount() {
     this.updateWindowDimensions();
@@ -58,16 +58,10 @@ class Canvas extends Component {
               value: 5,
             },
             line_linked: {
-              enable_auto: true,
               distance: 100,
               color: this.props.theme === "dark" ? "#ffffff" : "#000000",
               opacity: 1,
-              width: 1,
-              condensed_mode: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 600
-              }
+              width: 1
             },
             move: {
               enable: true,

@@ -6,8 +6,6 @@ import { store } from 'react-notifications-component';
 import 'animate.css/animate.compat.css'
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import Particles from "./components/particles";
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
 import { useColorModeValue } from "@chakra-ui/react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/style.css';
@@ -37,7 +35,6 @@ function App() {
       message: "Welcome to My Website!",
       type: "success",
       insert: "bottom",
-      isMobile: true,
       container: "bottom-right",
       animationIn: ["animated", "flipInX"],
       animationOut: ["animated", "flipOutX"],
@@ -65,62 +62,49 @@ function App() {
     }
   };
 
-  //MUI Theme
-  const mui_theme = createMuiTheme({
-    palette: {
-      type: theme,
-      primary: {
-        main: "#17a2b8"
-      }
-    }
-  });
-
   return (
     <Router>
-      <ThemeProvider theme = {mui_theme}>
-        <div className="App" style = {styles.root}>
-            {/* Notification */}
-            <ReactNotification />
+      <div className="App" style = {styles.root}>
+        {/* Notification */}
+        <ReactNotification />
 
-            {/* Particles for the Background*/}
-            <div className = "particles-js" style = {styles.particles}>
-              <Particles theme = {theme} />
-            </div>
-            
-            {/* Navbar Component */}
-            <NavbarComponent contact = {setContact}/>
-            
-            {/* Contact Modal */}
-            <Contact contact = {contact} setContact = {setContact} theme = {theme} styles = {styles} />
-
-            {/* react-router main content */}
-            <div className = "actual-content">
-              <Route render={({ location }) => (
-                
-                
-                <TransitionGroup>
-                  <CSSTransition key={location.pathname} timeout={300} classNames = 'fade' >
-                    
-                    <Switch location={location}>
-                      <Route exact path = "/" component = {Home} />
-                      <Route exact path = "/school" component = {School} />
-                      <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements}/>
-                      <Route exact path = "/articles/:name" component = {Article}/>
-                      <Route exact path = "/skills" component = {Skills} />
-                      <Route exact path = "/creations" component = {Creations} />
-                      <Route exact path = "/about" component = {About} />
-                      <Route component = {NotFound} />
-                    </Switch>
-                  </CSSTransition>
-                </TransitionGroup>
-              )} />
-            </div>
-
-            {/* Footer Component */}
-            <Footer/>
-                
+        {/* Particles for the Background*/}
+        <div className = "particles-js" style = {styles.particles}>
+          <Particles theme = {theme} />
         </div>
-     </ThemeProvider>
+        
+        {/* Navbar Component */}
+        <NavbarComponent contact = {setContact}/>
+        
+        {/* Contact Modal */}
+        <Contact contact = {contact} setContact = {setContact} theme = {theme} styles = {styles} />
+
+        {/* react-router main content */}
+        <div className = "actual-content">
+          <Route render={({ location }) => (
+            
+            
+            <TransitionGroup>
+              <CSSTransition key={location.pathname} timeout={300} classNames = 'fade' >
+                
+                <Switch location={location}>
+                  <Route exact path = "/" component = {Home} />
+                  <Route exact path = "/school" component = {School} />
+                  <Route exact path = "/competitions-achievements" component = {CompetitionsAchievements}/>
+                  <Route exact path = "/articles/:name" component = {Article}/>
+                  <Route exact path = "/skills" component = {Skills} />
+                  <Route exact path = "/creations" component = {Creations} />
+                  <Route exact path = "/about" component = {About} />
+                  <Route component = {NotFound} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )} />
+        </div>
+
+        {/* Footer Component */}
+        <Footer/>
+      </div>
     </Router>
   );
 }

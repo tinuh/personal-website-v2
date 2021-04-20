@@ -1,6 +1,4 @@
 import React from 'react';
-//import {Modal, Button as BButton} from 'react-bootstrap';
-//import TextField from '@material-ui/core/TextField';
 import { Formik, Form } from 'formik';
 import publicIp from 'public-ip';
 import { store } from 'react-notifications-component';
@@ -10,7 +8,7 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Modal as CModal,
+  Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
@@ -21,7 +19,14 @@ import {
   Textarea,
   } from '@chakra-ui/react';
 
-export default function Contact(props) {
+type contactProps = {
+  contact: any,
+  setContact: any,
+  theme: any,
+  styles: any
+}
+
+export default function Contact(props: contactProps) {
   const webhook = require("webhook-discord");
   const Airtable = require("airtable");
 
@@ -56,7 +61,6 @@ export default function Contact(props) {
           message: "Contact Form Not Submitted",
           type: "danger",
           insert: "bottom",
-          isMobile: true,
           container: "bottom-right",
           animationIn: ["animated", "flipInX"],
           animationOut: ["animated", "flipOutX"],
@@ -90,7 +94,6 @@ export default function Contact(props) {
           message: "Contact Form Submitted.",
           type: "success",
           insert: "bottom",
-          isMobile: true,
           container: "bottom-right",
           animationIn: ["animated", "flipInX"],
           animationOut: ["animated", "flipOutX"],
@@ -109,7 +112,7 @@ export default function Contact(props) {
 
     return (
         <div>
-      <CModal isOpen={props.contact} onClose={() => props.setContact(false)}>
+      <Modal isOpen={props.contact} onClose={() => props.setContact(false)} size="md" isCentered>
       <ModalOverlay />   
         <ModalContent>
         <ModalHeader>
@@ -123,7 +126,7 @@ export default function Contact(props) {
             handleSubmit(values);
           }}
         >
-        {({values, errors, tocuhed, form, handleChange, handleBlur, handleSubmit, isSubmitting}) => (
+        {({values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting}) => (
         <Form onSubmit={handleSubmit}>
           <ModalBody>
             
@@ -163,50 +166,7 @@ export default function Contact(props) {
         </Formik>
 
       </ModalContent>
-    </CModal>
-          {/*  <Modal
-            show = {props.contact}
-            onHide = {() => props.setContact(false)}
-            size="md"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-          >
-            <div style = {props.theme === "dark" ? {backgroundColor: "#222"} : {backgroundColor: "#ffffff"}}>
-              <Formik 
-                initialValues={{name: '', email: '', message: ''}}
-                onSubmit = {(values, {setSubmitting}) => {
-                  handleSubmit(values);
-                }}
-              >
-                {({values, errors, tocuhed, handleChange, handleBlur, handleSubmit, isSubmitting}) => (
-                  <form onSubmit={handleSubmit}>
-                    <Modal.Header closeButton>
-                      <Modal.Title id="contained-modal-title-vcenter" style = {props.theme === "dark" ? {color: "#ffffff"} : {color: "#222"}}>
-                        Contact
-                      </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                      <div className = "row">
-                        <div className = "col-md-6">
-                          <TextField onChange = {handleChange} value = {values.name} onBlur = {handleBlur} label = "Full Name" name = "name" type = "text" variant = "outlined" style = {props.styles.input} required/>
-                        </div><br/><br/><br/>
-                        <div className = "col-md-6">
-                          <TextField onChange = {handleChange} value = {values.email} onBlur = {handleBlur} label = "Email" name = "email" type = "email" variant = "outlined" style = {props.styles.input} required/>
-                        </div><br/><br/><br/>
-                        <div className = "col-md-12">
-                          <TextField onChange = {handleChange} value = {values.message} onBlur = {handleBlur} multiline rowsMax={6} rows= {4} label = "Message" name = "message" type = "text" variant = "outlined" style = {props.styles.input} required/>
-                        </div>
-                      </div>
-                      
-                    </Modal.Body>
-                    <Modal.Footer>
-                      <BButton type="submit" variant = "outline-success" disabled={isSubmitting}>Submit</BButton>
-                      <BButton type = "button" onClick={() => props.setContact(false)} variant = "outline-danger">Cancel</BButton>
-                    </Modal.Footer>
-                  </form>)}
-              </Formik>
-            </div>
-                </Modal> */}
+    </Modal>
         </div>
     )
 }

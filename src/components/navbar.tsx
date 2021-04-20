@@ -20,7 +20,7 @@ function NavbarComponent(props) {
         <LinkContainer exact to = "/">
             <Navbar.Brand>Tinu Vanapamula</Navbar.Brand>
         </LinkContainer>
-        <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <BNav className="ml-auto navbar nav">
                 <LinkContainer exact to="/" onClick={() => setExpanded(false)}><NavLink className = "navbar-item">Home</NavLink></LinkContainer>
