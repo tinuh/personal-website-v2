@@ -35,7 +35,7 @@ function CompetitionsAchievements() {
         if (!sortedData[year(record.fields.Date)]){
           let y = year(record.fields.Date)
           sortedData[y] = [];
-          collapse.y = false;
+          collapse[y] = false;
         }
       });
       await records.forEach(record => {
@@ -54,7 +54,6 @@ function CompetitionsAchievements() {
         message: "Click on the year to learn more",
         type: "info",
         insert: "bottom",
-        isMobile: true,
         container: "bottom-right",
         animationIn: ["animated", "flipInX"],
         animationOut: ["animated", "flipOutX"],

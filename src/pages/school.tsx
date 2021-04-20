@@ -20,7 +20,6 @@ function School() {
       message: "Click on the School to learn more.",
       type: "info",
       insert: "bottom",
-      isMobile: true,
       container: "bottom-right",
       animationIn: ["animated", "flipInX"],
       animationOut: ["animated", "flipOutX"],

@@ -3,7 +3,7 @@ import { extendTheme } from "@chakra-ui/react";
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,
-};
+}
 
 const colors = {
   brand: {
@@ -37,9 +37,9 @@ const fonts = {
 };
 
 const theme = extendTheme({ 
-  config, 
   colors,
-  fonts, 
+  fonts,
+  config
 });
 
 export default theme;

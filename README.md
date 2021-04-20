@@ -1,5 +1,5 @@
 ## Personal Website 
-### This is my personal website built with react.js
+### This is my personal website built with react
 
 Production Website: https://www.tinu.tech
 

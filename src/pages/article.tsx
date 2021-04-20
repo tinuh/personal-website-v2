@@ -5,13 +5,17 @@ import { useParams } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 import { Heading, Text } from "@chakra-ui/react"
 
+interface params {
+  name?: string;
+}
+
 function Article(props) {
-  const {name} = useParams();
+  const {name} = useParams<params>();
   const Airtable = require('airtable');
   const api = process.env.REACT_APP_AIRTABLE_API_KEY;
   let base = new Airtable({apiKey: api}).base('appj7u8nrwKWHIEdc');
   const [loading, setLoading] = React.useState(true);
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState<any>([]);
   //document.title = (data !== undefined ? data.name : "404: Article does not exist") + " - Tinu Vanapamula";
 
   
@@ -27,7 +31,6 @@ function Article(props) {
           message: "Click on title to go to the Live Site",
           type: "default",
           insert: "bottom",
-          isMobile: true,
           container: "bottom-right",
           animationIn: ["animated", "flipInX"],
           animationOut: ["animated", "flipOutX"],
@@ -45,7 +48,6 @@ function Article(props) {
           message: "Article does not exist",
           type: "danger",
           insert: "bottom",
-          isMobile: true,
           container: "bottom-right",
           animationIn: ["animated", "flipInX"],
           animationOut: ["animated", "flipOutX"],
@@ -83,7 +85,7 @@ function Article(props) {
         </div>
         <Text fontSize = "25px" className = "homework-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {ReactHtmlParser(data["Bottom Content"])} </Text>
       </div><br />
-    </div>) : (<div> <Heading textAlign = "center" as="h1">{!loading ? "404: Article does not exist" : "Loading..."}</Heading> </div>)
+    </div>) : (<div className="content"><Heading textAlign = "center" as="h1">{!loading ? "404: Article does not exist" : "Loading..."}</Heading></div>)
   );
 }
 
