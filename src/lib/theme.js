@@ -1,5 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+}
+
 const colors = {
   brand: {
     "red": "#ec3750",
@@ -33,7 +38,8 @@ const fonts = {
 
 const theme = extendTheme({ 
   colors,
-  fonts, 
+  fonts,
+  config
 });
 
 export default theme;

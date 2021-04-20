@@ -27,7 +27,7 @@ import Skills from "./pages/skills";
 
 function App() {
   const theme = useColorModeValue("light", "dark");
-  const [contact, setContact] = useState(false);
+  const [contact, setContact] = useState<boolean>(false);
 
   React.useEffect(() => {
     store.addNotification({
