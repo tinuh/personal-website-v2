@@ -26,7 +26,7 @@ function About() {
             I am currently well versed in the world of Web Development, and interested in branching out to other topics in computer science.
             I have won the <a target = "blank" href = "https://www.congressionalappchallenge.us/" className="about-link">Congressional App Challenge</a> in Maryland's District MD-03 for both the years of 2019 and 2020.
             You can learn more about my creations <Link className="about-link" to="/creations">Here</Link>.
-            Additionally, I am interested in electornic engineering and have participated in an Engineering Challenge at John's Hopkins Applied Physics lab.
+            Additionally, I am interested in electronic engineering and have participated in an Engineering Challenge at John's Hopkins Applied Physics lab.
             Learn more about my achievements and the competitions I've participated in <Link className="about-link" to="/competitions-achievements">Here</Link>.
             My hobbies include DIY Projects with electronics and the occasional video production.
             </Text>

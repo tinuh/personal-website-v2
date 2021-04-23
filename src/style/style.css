@@ -385,3 +385,11 @@ a {
     height: 100%;
     vertical-align: middle;
 }
+
+.loading {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 30vh;
+}

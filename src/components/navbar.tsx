@@ -52,25 +52,6 @@ function NavbarComponent(props) {
             </Navbar.Collapse>
         </Navbar>
 
-        {/* <nav className="navbar navbar-light navbar-expand-lg fixed-top portfolio-navbar gradient" style={{background: 'linear-gradient(90deg, var(--light), 0%, var(--cyan) 0%, var(--danger) 100%), var(--blue)'}}>
-                <div className="container-fluid"><a className="navbar-brand logo" href="/index.html">Tinu Vanapamula</a><button data-toggle="collapse" className="navbar-toggler" data-target="#navbarNav-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
-                    <div className="collapse navbar-collapse" id="navbarNav-1">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li className="nav-item"><a className="nav-link active" data-bs-hover-animate="tada" href="/">Home</a></li>
-                            <li className="nav-item"><a className="nav-link" data-bs-hover-animate="tada" href="/school" style={{color: 'rgba(0,0,0,0.9)'}}>School</a></li>
-                            <li className="nav-item"><a className="nav-link" data-bs-hover-animate="tada" href="/competitions-achievements" style={{color: 'rgba(0,0,0,0.9)'}}>Achievements</a></li>
-                            <li className="nav-item"><a className="nav-link" data-bs-hover-animate="tada" href="hire-me.html" style={{color: 'rgba(0,0,0,0.9)'}}>Creations</a></li>
-                        </ul>
-                        <ul className="nav navbar-nav">
-                            <li className="nav-item"><a className="nav-link active" data-bs-hover-animate="tada" href="#">About</a></li>
-                            <li className="nav-item"><a className="nav-link active" data-bs-hover-animate="tada" href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-              </nav> */}
-        
-
-
     </div>
   );
 }
