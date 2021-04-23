@@ -3,4 +3,4 @@
 
 Production Website: https://www.tinu.tech
 
-Development Website: https://dev.tinu.tech
+Development Website: http://dev.tinu.tech
