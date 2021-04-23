@@ -16,6 +16,7 @@ function CompetitionsAchievements() {
   //init airtable connection
   const Airtable = require('airtable');
   const api = process.env.REACT_APP_AIRTABLE_API_KEY;
+  const env = process.env.REACT_APP_ENV;
   let base = new Airtable({apiKey: api}).base('appj7u8nrwKWHIEdc');
   
   const month = (val) => {
@@ -29,7 +30,8 @@ function CompetitionsAchievements() {
   }
 
   React.useEffect(() => {
-    base('Achievements').select({filterByFormula: "({Status} = 'Published')", sort: [{field: "Date", direction: "desc"}]}).eachPage(async function page(records) {
+    const filter = env === "prod" ? {filterByFormula: "({Status} = 'Published')", sort: [{field: "Date", direction: "desc"}]} : {filterByFormula: "OR(({Status} = 'Published'), ({Status} = 'Dev'))", sort: [{field: "Date", direction: "desc"}]}
+    base('Achievements').select(filter).eachPage(async function page(records) {
       let sortedData = {};
       await records.forEach(record  => {
         if (!sortedData[year(record.fields.Date)]){
