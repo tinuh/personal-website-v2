@@ -13,14 +13,15 @@ function Article(props) {
   const {name} = useParams<params>();
   const Airtable = require('airtable');
   const api = process.env.REACT_APP_AIRTABLE_API_KEY;
+  const env = process.env.REACT_APP_ENV;
   let base = new Airtable({apiKey: api}).base('appj7u8nrwKWHIEdc');
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState<any>([]);
-  //document.title = (data !== undefined ? data.name : "404: Article does not exist") + " - Tinu Vanapamula";
+  document.title = "Article - Tinu Vanapamula";
+  const filter = env === "dev" ? {filterByFormula: `AND({Identifier} = '${name}', {Status} = 'Published')`} : {filterByFormula: `AND({Identifier} = '${name}', OR({Status} = 'Published', {Status} = 'Dev'))`}
 
-  
   React.useEffect(() => {
-    base('Articles').select({filterByFormula: `AND({Identifier} = '${name}', OR({Status} = 'Published', {Status} = 'Dev'))`}).eachPage(async function page(records, fetchNextPage) {
+    base('Articles').select(filter).eachPage(async function page(records, fetchNextPage) {
       if(records[0]){
         await setData(records[0].fields)
         await console.log(records);
