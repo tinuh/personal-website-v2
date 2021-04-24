@@ -1,10 +1,7 @@
 ## Personal Website 
 ### This is my personal website built with react
 
-Production Website: https://www.tinu.tech
-Development Website: http://dev.tinu.tech
-
-Production Website: [tinu.tech](https://tinu.tech)
+Production Website: [tinu.tech](https://tinu.tech)\
 Development Website: [dev.tinu.tech](https://dev.tinu.tech)
 
 ## 🚨 Forking this repo
