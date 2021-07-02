@@ -24,7 +24,7 @@ function Home() {
 
         <div className = "home-text-sub">
           <Wave
-            text="Click me to learn more"
+            text="Click on me to learn more"
             effect="verticalFadeIn"
             effectChange={2.5}
             effectDirection='down'
