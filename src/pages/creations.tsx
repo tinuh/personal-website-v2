@@ -9,13 +9,15 @@ function Creations() {
   const {colorMode} = useColorMode();
   const Airtable = require('airtable');
   const api = process.env.REACT_APP_AIRTABLE_API_KEY;
+  const env = process.env.REACT_APP_ENV;
   let base = new Airtable({apiKey: api}).base('appj7u8nrwKWHIEdc');
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState<any>([]);
 
   React.useEffect(() => {
+      const filter = env === "prod" ? {filterByFormula: "({Status} = 'Published')", sort: [{field: "Priority", direction: "asc"}]} : {filterByFormula: "OR(({Status} = 'Published'), ({Status} = 'Dev'))", sort: [{field: "Priority", direction: "asc"}]}
 
-      base('Creations').select({filterByFormula: "({Status} = 'Published')", sort: [{field: "Priority", direction: "asc"}]}).eachPage(function page(records, fetchNextPage) {
+      base('Creations').select(filter).eachPage(function page(records, fetchNextPage) {
         setData(records)
         setLoading(false);
         console.log(records);
@@ -23,7 +25,7 @@ function Creations() {
       });
 
       // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [] );
+  }, []);
 
   return (!loading ? (
     <div className="content">
@@ -57,7 +59,7 @@ function Creations() {
   (
     <div className="content">
       <div className = "loading">
-        <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xmlSpace="preserve">
+        <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve">
           <path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
               <animateTransform 
                 attributeName="transform" 

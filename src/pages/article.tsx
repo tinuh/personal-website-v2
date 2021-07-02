@@ -13,14 +13,15 @@ function Article(props) {
   const {name} = useParams<params>();
   const Airtable = require('airtable');
   const api = process.env.REACT_APP_AIRTABLE_API_KEY;
+  const env = process.env.REACT_APP_ENV;
   let base = new Airtable({apiKey: api}).base('appj7u8nrwKWHIEdc');
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState<any>([]);
-  //document.title = (data !== undefined ? data.name : "404: Article does not exist") + " - Tinu Vanapamula";
+  document.title = "Article - Tinu Vanapamula";
+  const filter = env === "dev" ? {filterByFormula: `AND({Identifier} = '${name}', {Status} = 'Published')`} : {filterByFormula: `AND({Identifier} = '${name}', OR({Status} = 'Published', {Status} = 'Dev'))`}
 
-  
   React.useEffect(() => {
-    base('Articles').select({filterByFormula: `AND({Identifier} = '${name}', {Status} = 'Published')`}).eachPage(async function page(records, fetchNextPage) {
+    base('Articles').select(filter).eachPage(async function page(records, fetchNextPage) {
       if(records[0]){
         await setData(records[0].fields)
         await console.log(records);
@@ -87,7 +88,7 @@ function Article(props) {
       </div><br />
     </div>) : (
     <div className="content">
-      <div className = "loading">
+      {loading ? <div className = "loading">
         <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve">
           <path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
             <animateTransform 
@@ -120,7 +121,7 @@ function Article(props) {
                 repeatCount="indefinite" />
             </path>
           </svg>
-        </div>
+        </div> : <div><Heading textAlign = "center">404: Article does not exist</Heading></div>}
     </div>)
   );
 }
