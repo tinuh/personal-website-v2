@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card } from "react-bootstrap";
-import {Link} from "react-router-dom";
-import { useColorMode, Heading, Button } from '@chakra-ui/react';
+import { Link } from "react-router-dom";
+import { useColorMode, Heading } from '@chakra-ui/react';
 import ReactHtmlParser from 'react-html-parser';
+import TiltWrapper from "../components/tilt";
 
 function Creations() {
   document.title = "Creations - Tinu Vanapamula";
@@ -35,21 +36,26 @@ function Creations() {
           <div className="row">
             {data.map(({ fields }) => 
               <div className = "col-md-4">
-              <Card className = {colorMode === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
-                <Card.Img variant="top" src={fields.Image && fields.Image[0].url}/>
-                <Card.Body>
-                    <div style = {{textAlign: "center"}}><Card.Title>{fields.Name}</Card.Title></div>
-                    <Card.Text style = {{fontSize: '16px'}}>
-                      {ReactHtmlParser(fields.Description)}
+                <a href = {fields.URL} target = "blank" style = {{textDecoration: "none"}} >
+                  <TiltWrapper>
+                    <Card className = {colorMode === "light" ? "creation-card mb-3" : "creation-card text-white bg-dark mb-3"}>
+                      <Card.Img variant="top" src={fields.Image && fields.Image[0].url}/>
+                      <Card.Body>
+                          <div style = {{textAlign: "center"}}><Card.Title>{fields.Name}</Card.Title></div>
+                          <Card.Text style = {{fontSize: '16px'}}>
+                            {ReactHtmlParser(fields.Description)}
 
-                      {fields['Read More Page'] && (<> 
-                          &nbsp;Click <Link className = "index-link" to = {"/articles/" + fields['Read More Page']}>Here</Link> to read more.
-                      </>)}
-                      
-                    </Card.Text>
-                    <div style = {{textAlign: "center"}}><a target = "blank" style = {{textDecoration: "none"}} href = {fields.URL}><Button className = "creation-button" variant="outline">{fields["Button Overide"] ? fields["Button Overide"] : "Visit Site"}</Button></a></div>
-                </Card.Body>
-              </Card><br/>
+                            {fields['Read More Page'] && (<> 
+                                &nbsp;Click <Link className = "index-link" to = {"/articles/" + fields['Read More Page']}>Here</Link> to read more.
+                            </>)}
+                            
+                          </Card.Text>
+                          {/* <div style = {{textAlign: "center"}}><a target = "blank" style = {{textDecoration: "none"}} href = {fields.URL}><Button className = "creation-button" variant="outline">{fields["Button Overide"] ? fields["Button Overide"] : "Visit Site"}</Button></a></div> */}
+                      </Card.Body>
+                    </Card>
+                  </TiltWrapper>
+                </a>
+              <br/>
             </div>
             )}
           </div>
