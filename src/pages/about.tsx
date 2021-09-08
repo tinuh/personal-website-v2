@@ -19,7 +19,7 @@ function About() {
         <div className="about-body">
             <Text className = "about-text" fontSize = "24px">
             &nbsp;&nbsp;&nbsp; Hi, I'm Tinu Vanapamula!
-            I'm a rising Sophomore at Montgomery Blair High School and I'm quite passionate about Computer Science.&nbsp;
+            I'm a Sophomore at Montgomery Blair High School and I'm quite passionate about Computer Science.&nbsp;
             Computer Science has been a large part of my life ever since my 6th grade summer.&nbsp;
             {/* Mr. Bhaskar Ganti played a huge role in my computer science career by mentoring me.
             He is also the CEO of <a target = "blank" href = "http://issi-software.com" className="about-link">International Software Systems Inc</a>. */}    
