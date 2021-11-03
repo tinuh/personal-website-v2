@@ -158,7 +158,7 @@ export default function Contact(props: contactProps) {
             <Button colorScheme="blue" mr={3} type="submit" disabled={isSubmitting}>
               Submit
             </Button>
-            <Button colorScheme="red" type="submit" onClick={() => props.setContact(false)} disabled={isSubmitting}>
+            <Button colorScheme="red" onClick={() => props.setContact(false)} disabled={isSubmitting}>
               Cancel
             </Button>
           </ModalFooter>
